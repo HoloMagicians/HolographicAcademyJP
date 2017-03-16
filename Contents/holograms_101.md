@@ -1,4 +1,4 @@
-**ホログラム 101**
+# ホログラム 101
 
 このチュートリアルでは、Unity
 を使ってビルドするプロジェクト全体について順を追って説明します。このプロジェクトでは、[*視線*](https://developer.microsoft.com/ja-jp/windows/holographic/gaze)、[*ジェスチャー*](https://developer.microsoft.com/ja-jp/windows/holographic/gestures)、[*音声入力*](https://developer.microsoft.com/ja-jp/windows/holographic/voice_input)、[*空間音響*](https://developer.microsoft.com/ja-jp/windows/holographic/spatial_sound)、[*空間マッピング*](https://developer.microsoft.com/ja-jp/windows/holographic/spatial_mapping)など、Windows
@@ -6,7 +6,7 @@ Holographic Platform と HoloLens の核となる機能を示します。
 
 このチュートリアルの所要時間は約 1 時間です。
 
-**前提条件**
+## 前提条件
 
 -   [*適切なツールをインストール*](https://developer.microsoft.com/ja-jp/windows/holographic/install_the_tools)して構成した
     Windows 10 PC。
@@ -14,7 +14,7 @@ Holographic Platform と HoloLens の核となる機能を示します。
 -   [*開発用に構成した*](https://developer.microsoft.com/ja-jp/windows/holographic/Using_Visual_Studio.html#enabling_developer_mode)
     HoloLens デバイス。
 
-**プロジェクト ファイル**
+## プロジェクト ファイル
 
 -   プロジェクトに必要な[*ファイル*](https://github.com/Microsoft/HolographicAcademy/archive/Holograms-101.zip)はダウンロードします。Unity
     5.5 が必要です。
@@ -26,7 +26,7 @@ Holographic Platform と HoloLens の核となる機能を示します。
 -   デスクトップなどのアクセスしやすい場所にファイルを解凍します。フォルダー名はそのまま
     Origami を使用します。
 
-**チュートリアルの内容**
+## チュートリアルの内容
 
 -   [*1 第 １ 章 -
     「ホログラム」の世界*](https://developer.microsoft.com/ja-jp/windows/holographic/holograms_101#chapter_1_-_.22holo.22_world)
@@ -52,12 +52,12 @@ Holographic Platform と HoloLens の核となる機能を示します。
 -   [*8
     終わりに*](https://developer.microsoft.com/ja-jp/windows/holographic/holograms_101#the_end)
 
-**第 1 章 - 「ホログラム」の世界**
+## 第 1 章 - 「ホログラム」の世界
 
 この章では、このチュートリアル最初の Unity
 プロジェクトをセットアップし、ビルドと配置のプロセスについて順を追って説明します。
 
-**目標**
+### 目標
 
 -   ホログラフィック開発向けに Unity をセットアップする。
 
@@ -65,7 +65,7 @@ Holographic Platform と HoloLens の核となる機能を示します。
 
 -   作成したホログラムを確認する。
 
-**手順**
+### 手順
 
 -   Unity を起動します。
 
@@ -83,7 +83,7 @@ Holographic Platform と HoloLens の核となる機能を示します。
 -   新しいシーンに「Origami」という名前を付けて、\[Save\] (保存)
     をクリックします。
 
-**メイン仮想カメラのセットアップ**
+### メイン仮想カメラのセットアップ
 
 -   \[Hierarchy\] (階層) パネルで \[Main Camera\] (メイン カメラ)
     を選びます。
@@ -100,7 +100,7 @@ Holographic Platform と HoloLens の核となる機能を示します。
 
 -   \[R\]、\[G\]、\[B\] および \[A\] の各フィールドに 0 を設定します。
 
-**シーンのセットアップ**
+### シーンのセットアップ
 
 -   \[Hierarchy\] (階層) パネルで、\[Create\] (作成)、\[Create Empty\]
     (空オブジェクトの作成) の順にクリックします。
@@ -143,7 +143,7 @@ Holographic Platform と HoloLens の核となる機能を示します。
 -   再度 \[Play\] (プレイ) をクリックすると、プレビュー
     モードが停止します。
 
-**Unity から Visual Studio へのプロジェクトのエクスポート**
+### Unity から Visual Studio へのプロジェクトのエクスポート
 
 -   Unity で、\[File\] (ファイル)、\[Build Settings\] (ビルド設定)
     の順に選びます。
@@ -203,16 +203,16 @@ Holographic Platform と HoloLens の核となる機能を示します。
 
 -   HoloLens を着用して、あたりを見回し、新しいホログラムを確認します。
 
-**第 2 章 – 視線**
+## 第 2 章 – 視線
 
 この章では、ホログラムを操作する 3 つの方法のうちの最初の １
 つ、[*視線*](https://developer.microsoft.com/ja-jp/windows/holographic/gaze)について説明します。
 
-**目標**
+### 目標
 
 -   世界を固定するカーソルを使って視線を視覚化する。
 
-**手順**
+### 手順
 
 -   Unity プロジェクトに戻ります。\[Build Settings\] (ビルド設定)
     ウィンドウが開いたままの場合はこれを閉じます。
@@ -263,16 +263,16 @@ WorldCursor.cs \[表示\]
 
 -   ここで、シーンを見回すと、カーソルが物体の形状にどのように関わるかがわかります。
 
-**第 3 章 – ジェスチャー**
+## 第 3 章 – ジェスチャー
 
 この章では、[*ジェスチャー*](https://developer.microsoft.com/ja-jp/windows/holographic/gestures)のサポートを追加します。ここでは紙で作った球体をユーザーが選ぶと、その球体が落ちるようにします。そのため、Unity
 の物理エンジンを使って重力を有効にします。
 
-**目標**
+### 目標
 
 -   「選ぶ」というジェスチャーを使ってホログラムを制御する。
 
-**手順**
+### 手順
 
 ここでは、最初にスクリプトを作成してから、「選ぶ」というジェスチャーを検出できるようにします。
 
@@ -310,20 +310,20 @@ SphereCommands.cs \[表示\]
 
 -   「選ぶ」ジェスチャーを行い、球体が下の面に落ちるようすを見守ります。
 
-**第 4 章 – 音声**
+### 第 4 章 – 音声
 
 この章では、2
 つの[*音声コマンド*](https://developer.microsoft.com/ja-jp/windows/holographic/voice_input)のサポートを追加します。「Reset
 world」 (世界をリセット) で落ちた球体を元の場所に戻し、「Drop sphere」
 (球を落とせ) で球体を落下させます。
 
-**目標**
+### 目標
 
 -   常にバックグラウンドで聞こえる音声コマンドを追加する。
 
 -   音声コマンドに反応するホログラムを作成する。
 
-**手順**
+### 手順
 
 -   \[Scripts\] フォルダーで、SpeechManager
     というスクリプトを作成します。
@@ -351,16 +351,16 @@ SphereCommands.cs \[表示\]
 -   「Reset World」 (世界をリセット)
     と発話し、球体を元の位置に戻します。
 
-**第 5 章 – 空間音響**
+## 第 5 章 – 空間音響
 
 この章では、アプリに音楽を追加してから、特定の動作で音響効果が引き起こされるようにします。ここでは[*空間音響*](https://developer.microsoft.com/ja-jp/windows/holographic/spatial_sound)を使用して、3D
 空間の特定の場所に効果音を設定します。
 
-**目標**
+### 目標
 
 -   仮想の世界でホログラムを聞く。
 
-**手順**
+### 手順
 
 -   Unity 上部のメニューで \[Edit\] (編集)、\[Project Settings\]
     (プロジェクト設定)、\[Audio\] (オーディオ) の順に選びます。
@@ -414,18 +414,18 @@ SphereSounds.cs \[表示\]
 
 -   ステージに近づいたり、離れたり、左右に動いて音の変化を聞き取ります。
 
-**第 6 章 – 空間マッピング**
+## 第 6 章 – 空間マッピング
 
 ここで、ゲーム
 ボードを現実世界の現実の物体に持ち込むために、[*空間マッピング*](https://developer.microsoft.com/ja-jp/windows/holographic/spatial_mapping)を使用します。
 
-**目標**
+### 目標
 
 -   現実世界を仮想世界に持ち込む。
 
 -   最も重要な場所にホログラムを配置する。
 
-**手順**
+### 手順
 
 -   Unity の \[Project\] (プロジェクト) パネルで \[Holograms\]
     フォルダーをクリックします。
@@ -470,13 +470,13 @@ TapToPlaceParent.cs \[表示\]
 
 -   これで、ゲームに視線を送り、「選ぶ」ジェスチャーを使ってゲームを新しい場所に移動して、再び「選ぶ」ジェスチャーを行うと、ゲームを特定の場所に移動できるようになります。
 
-**第 7 章 – ホログラフィックを楽しむ**
+## 第 7 章 – ホログラフィックを楽しむ
 
-**目標**
+### 目標
 
 -   ホログラフィックの地下の世界への入り口を暴く。
 
-**手順**
+### 手順
 
 ここでは、ホログラフィックの地下の世界を明らかにする方法について説明します。
 
@@ -520,7 +520,7 @@ HitTarget.cs \[表示\]
 -   球体がターゲット (青い扇)
     に当たると、爆発が起こります。コレクションは消え去り、地下の世界への穴が現れます。
 
-**終わりに**
+## 終わりに
 
 これで、このチュートリアルは終わりです。
 

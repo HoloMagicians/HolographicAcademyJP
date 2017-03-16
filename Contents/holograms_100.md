@@ -19,15 +19,15 @@
 
 -   [第 4 章 - Unity から Visual Studioへのエクスポート](holograms_100.md#第-4-章---unity-から-visual-studio-へのエクスポート)
 
-    -   [4.1 Unityのパフォーマンス設定]()
+    -   [4.1 Unityのパフォーマンス設定](holograms_100.md#unity-のパフォーマンス設定)
 
-    -   [4.2 Unityのビルド設定]()
+    -   [4.2 Unityのビルド設定](holograms_100.md#unity-のビルド設定)
 
-    -   [4.3 Windows Holographicのエクスポート指定]()
+    -   [4.3 Windows Holographicのエクスポート指定](holograms_100.md#windows-holographic-のエクスポート指定)
 
-    -   [*4.4 Visual Studioソリューションのエクスポート*]()
+    -   [4.4 Visual Studioソリューションのエクスポート](holograms_100.md#visual-studio-ソリューションのエクスポート)
 
-    -   [*4.5 Windows.Holographicへのアプリのターゲット指定*]()
+    -   [4.5 Windows.Holographicへのアプリのターゲット指定](holograms_100.md#windowsholographic-へのアプリのターゲット指定)
 
 -   [第 5 章 – ビルドと配置](holograms_100.md#第-5-章--ビルドと配置)
 

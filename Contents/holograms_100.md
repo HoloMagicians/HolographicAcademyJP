@@ -11,38 +11,27 @@
 
 ## チュートリアルの内容
 
--   [* 第 1 章 –
-    プロジェクトの新規作成*](holograms_100.md#第-1-章--プロジェクトの新規作成)
+-   [第 1 章 – プロジェクトの新規作成](holograms_100.md#第-1-章--プロジェクトの新規作成)
 
--   [*2 第 2 章 -
-    カメラのセットアップ*](https://developer.microsoft.com/ja-jp/windows/holographic/holograms_100#chapter_2_-_setup_the_camera)
+-   [第 2 章 - カメラのセットアップ](holograms_100.md#第-2-章---カメラのセットアップ)
 
--   [*3 第 3 章 –
-    ホログラムの作成*](https://developer.microsoft.com/ja-jp/windows/holographic/holograms_100#chapter_3_-_create_a_hologram)
+-   [第 3 章 – ホログラムの作成](holograms_100.md#第-3-章--ホログラムの作成)
 
--   [*4 第 4 章 - Unity から Visual Studio
-    へのエクスポート*](https://developer.microsoft.com/ja-jp/windows/holographic/holograms_100#chapter_4_-_export_from_unity_to_visual_studio)
+-   [第 4 章 - Unity から Visual Studioへのエクスポート](holograms_100.md#第-4-章---unity-から-visual-studio-へのエクスポート)
 
-    -   [*4.1 Unity
-        のパフォーマンス設定*](https://developer.microsoft.com/ja-jp/windows/holographic/holograms_100#unity_performance_settings)
+    -   [4.1 Unityのパフォーマンス設定]()
 
-    -   [*4.2 Unity
-        のビルド設定*](https://developer.microsoft.com/ja-jp/windows/holographic/holograms_100#unity_build_settings)
+    -   [4.2 Unityのビルド設定]()
 
-    -   [*4.3 Windows Holographic
-        のエクスポート指定*](https://developer.microsoft.com/ja-jp/windows/holographic/holograms_100#specify_the_export_for_windows_holographic)
+    -   [4.3 Windows Holographicのエクスポート指定]()
 
-    -   [*4.4 Visual Studio
-        ソリューションのエクスポート*](https://developer.microsoft.com/ja-jp/windows/holographic/holograms_100#export_the_visual_studio_solution)
+    -   [*4.4 Visual Studioソリューションのエクスポート*]()
 
-    -   [*4.5 Windows.Holographic
-        へのアプリのターゲット指定*](https://developer.microsoft.com/ja-jp/windows/holographic/holograms_100#target_the_app_to_windows.holographic)
+    -   [*4.5 Windows.Holographicへのアプリのターゲット指定*]()
 
--   [*5 第 5 章 –
-    ビルドと配置*](https://developer.microsoft.com/ja-jp/windows/holographic/holograms_100#chapter_5_-_build_and_deploy)
+-   [第 5 章 – ビルドと配置](holograms_100.md#第-5-章--ビルドと配置)
 
--   [*6
-    関連項目*](https://developer.microsoft.com/ja-jp/windows/holographic/holograms_100#see_also)
+-   [関連項目](holograms_100.md#関連項目)
 
 ## 第 1 章 – プロジェクトの新規作成
 
@@ -155,7 +144,7 @@ HelloHolograms の Unity
 での作業はこれで完了です。そこで、このプロジェクトを Visual
 Studio、そして HoloLens にエクスポートします。
 
-**Unity のパフォーマンス設定**
+### Unity のパフォーマンス設定
 
 Unity の画質設定
 
@@ -170,7 +159,7 @@ HoloLens
     をオンにします。Windows ストアの列の \[Fastest\] (最速)
     行のボックスが緑色になったら、正しく設定されたことになります。
 
-## Unity のビルド設定
+### Unity のビルド設定
 
 ここでは、ユニバーサル Windows プラットフォーム
 アプリとしてエクスポートする Unity プロジェクトを指定します。
@@ -185,7 +174,7 @@ HoloLens
 
 4.  \[Build Type\] (ビルドの種類) を \[D3D\] に設定します。
 
-## Windows Holographic のエクスポート指定
+### Windows Holographic のエクスポート指定
 
 ここで、エクスポートするアプリが 2D ビューではなくホログラフィック
 ビューを作成することを Unity
@@ -206,7 +195,7 @@ HoloLens
     の一覧を追加し、サポート対象のデバイスの一覧に "Windows Holographic"
     が表示されることを確認します。
 
-## Visual Studio ソリューションのエクスポート
+### Visual Studio ソリューションのエクスポート
 
 これで、Unity プロジェクトにすべての設定が適用され、HoloLens アプリ用
 Visual Studio
@@ -237,7 +226,7 @@ Visual Studio
 9.  生成された Visual Studio ソリューション (この例では
     HelloHolograms.sln) を開きます。
 
-## Windows.Holographic へのアプリのターゲット指定
+### Windows.Holographic へのアプリのターゲット指定
 
 既定では、Unity からエクスポートしたユニバーサル Windows
 プラットフォーム アプリは、Windows 10
@@ -269,7 +258,7 @@ Visual Studio
 ここで、HoloLens
 に配置する場合とエミュレーターに配置する場合とでは指示が異なります。お使いの設定に応じて以下の指示に従います。
 
-## Wi-Fi 接続の HoloLens
+### Wi-Fi 接続の HoloLens
 
 1.  \[ローカル コンピューター\] の横にある矢印をクリックし、配置先を
     \[リモート コンピューター\] に変更します。
@@ -282,21 +271,21 @@ Visual Studio
     の順に選びます。デバイスに初めて配置する場合は、[*Visual Studio
     とのペアリング*](https://developer.microsoft.com/ja-jp/windows/holographic/Using_Visual_Studio.html#pairing_your_device)が必要です。
 
-## USB 接続の HoloLens
+### USB 接続の HoloLens
 
 1.  \[ローカル コンピューター\] の横にある矢印をクリックし、配置先を
     \[デバイス\] に変更します。
 
 2.  \[デバッグ\]、\[デバッグなしで開始\] の順に選びます。
 
-## エミュレーター
+### エミュレーター
 
 1.  \[デバイス\] の横にある矢印をクリックし、\[HoloLens Emulator\]
     (HoloLens エミュレーター) を選びます。
 
 2.  \[デバッグ\]、\[デバッグなしで開始\] の順に選びます。
 
-## アプリのテスト
+### アプリのテスト
 
 これでアプリを配置したので、キューブをあちこち移動して、目の前にキューブが浮かび上がるのを観察します。
 

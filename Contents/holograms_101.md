@@ -120,7 +120,51 @@
 -   WorldCursor スクリプトをダブルクリックして Visual Studioで開きます。
 -   次のコードをコピーして WorldCursor.cs に貼り付け、\[すべて保存\]をクリックします。
 
-WorldCursor.cs \[表示\]
+WorldCursor.cs
+```cs
+using UnityEngine;
+
+public class WorldCursor : MonoBehaviour
+{
+    private MeshRenderer meshRenderer;
+
+    // Use this for initialization
+    void Start()
+    {
+        // Grab the mesh renderer that&#39;s on the same object as this script.
+        meshRenderer = this.gameObject.GetComponentInChildren&lt;MeshRenderer&gt;();
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        // Do a raycast into the world based on the user&#39;s
+        // head position and orientation.
+        var headPosition = Camera.main.transform.position;
+        var gazeDirection = Camera.main.transform.forward;
+
+        RaycastHit hitInfo;
+
+        if (Physics.Raycast(headPosition, gazeDirection, out hitInfo))
+        {
+            // If the raycast hit a hologram...
+            // Display the cursor mesh.
+            meshRenderer.enabled = true;
+
+            // Move the cursor to the point where the raycast hit.
+            this.transform.position = hitInfo.point;
+
+            // Rotate the cursor to hug the surface of the hologram.
+            this.transform.rotation = Quaternion.FromToRotation(Vector3.up, hitInfo.normal);
+        }
+        else
+        {
+            // If the raycast did not hit a hologram, hide the cursor mesh.
+            meshRenderer.enabled = false;
+        }
+    }
+}
+```
 
 -   \[File\] (ファイル)、\[Build Settings\] (ビルド設定)の順に選んで、アプリをリビルドします。
 -   前回 HoloLens の配置に使用した Visual Studioソリューションに戻ります。

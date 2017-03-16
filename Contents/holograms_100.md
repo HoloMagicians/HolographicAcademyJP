@@ -4,12 +4,12 @@
 アプリを作成する方法について順を追って説明します。作成後のプロジェクトは、ホログラフィック
 アプリを Unity でビルドする場合の開始テンプレートとして機能します。
 
-**前提条件**
+## 前提条件
 
 -   [*適切なツールをインストール*](https://developer.microsoft.com/ja-jp/windows/holographic/install_the_tools)して構成した
     Windows 10 PC。
 
-**チュートリアルの内容**
+## チュートリアルの内容
 
 -   [*1 第 1 章 –
     プロジェクトの新規作成*](https://developer.microsoft.com/ja-jp/windows/holographic/holograms_100#chapter_1_-_create_a_new_project)
@@ -44,7 +44,7 @@
 -   [*6
     関連項目*](https://developer.microsoft.com/ja-jp/windows/holographic/holograms_100#see_also)
 
-**第 1 章 – プロジェクトの新規作成**
+## 第 1 章 – プロジェクトの新規作成
 
 Unity
 を使ってアプリをビルドするには、まず、プロジェクトを作成する必要があります。プロジェクトとはフォルダーのことです。このフォルダーには、Maya、Max
@@ -78,7 +78,7 @@ Studio の場合は \*.csproj) では一元管理されません。Unity はプ�
 
 6.  \[Create project\] (プロジェクトの作成) を選びます。
 
-**第 2 章 - カメラのセットアップ**
+## 第 2 章 - カメラのセットアップ
 
 Unity のメイン カメラ (Main Camera) は、ヘッド
 トラッキングと立体視レンダリングを処理します。このメイン カメラを
@@ -120,7 +120,7 @@ HoloLens と一緒に使うには、メイン カメラにいくつか変更を�
     \[Near\] (近く) フィールドの値を既定値の 0.3 から HoloLens 推奨の
     0.85 に変更します。
 
-**第 3 章 – ホログラムの作成**
+## 第 3 章 – ホログラムの作成
 
 Unity プロジェクトでのホログラムの作成は、Unity
 で他のオブジェクトを作成するのと変わりません。Unity
@@ -149,7 +149,7 @@ Unity プロジェクトでのホログラムの作成は、Unity
     (シーンの保存) の順に選び、シーンに名前を付けてから、\[Save\] (保存)
     を選びます。
 
-**第 4 章 - Unity から Visual Studio へのエクスポート**
+## 第 4 章 - Unity から Visual Studio へのエクスポート
 
 HelloHolograms の Unity
 での作業はこれで完了です。そこで、このプロジェクトを Visual
@@ -170,7 +170,7 @@ HoloLens
     をオンにします。Windows ストアの列の \[Fastest\] (最速)
     行のボックスが緑色になったら、正しく設定されたことになります。
 
-**Unity のビルド設定**
+## Unity のビルド設定
 
 ここでは、ユニバーサル Windows プラットフォーム
 アプリとしてエクスポートする Unity プロジェクトを指定します。
@@ -185,7 +185,7 @@ HoloLens
 
 4.  \[Build Type\] (ビルドの種類) を \[D3D\] に設定します。
 
-**Windows Holographic のエクスポート指定**
+## Windows Holographic のエクスポート指定
 
 ここで、エクスポートするアプリが 2D ビューではなくホログラフィック
 ビューを作成することを Unity
@@ -206,7 +206,7 @@ HoloLens
     の一覧を追加し、サポート対象のデバイスの一覧に "Windows Holographic"
     が表示されることを確認します。
 
-**Visual Studio ソリューションのエクスポート**
+## Visual Studio ソリューションのエクスポート
 
 これで、Unity プロジェクトにすべての設定が適用され、HoloLens アプリ用
 Visual Studio
@@ -237,7 +237,7 @@ Visual Studio
 9.  生成された Visual Studio ソリューション (この例では
     HelloHolograms.sln) を開きます。
 
-**Windows.Holographic へのアプリのターゲット指定**
+## Windows.Holographic へのアプリのターゲット指定
 
 既定では、Unity からエクスポートしたユニバーサル Windows
 プラットフォーム アプリは、Windows 10
@@ -258,7 +258,7 @@ Visual Studio
 
 4.  Package.appxmanifest を保存します。
 
-**第 5 章 – ビルドと配置**
+## 第 5 章 – ビルドと配置
 
 最後に、Unity
 からエクスポートしたプロジェクトをビルドし、デバイスに配置して使ってみます。
@@ -269,7 +269,7 @@ Visual Studio
 ここで、HoloLens
 に配置する場合とエミュレーターに配置する場合とでは指示が異なります。お使いの設定に応じて以下の指示に従います。
 
-**Wi-Fi 接続の HoloLens**
+## Wi-Fi 接続の HoloLens
 
 1.  \[ローカル コンピューター\] の横にある矢印をクリックし、配置先を
     \[リモート コンピューター\] に変更します。
@@ -282,25 +282,25 @@ Visual Studio
     の順に選びます。デバイスに初めて配置する場合は、[*Visual Studio
     とのペアリング*](https://developer.microsoft.com/ja-jp/windows/holographic/Using_Visual_Studio.html#pairing_your_device)が必要です。
 
-**USB 接続の HoloLens**
+## USB 接続の HoloLens
 
 1.  \[ローカル コンピューター\] の横にある矢印をクリックし、配置先を
     \[デバイス\] に変更します。
 
 2.  \[デバッグ\]、\[デバッグなしで開始\] の順に選びます。
 
-**エミュレーター**
+## エミュレーター
 
 1.  \[デバイス\] の横にある矢印をクリックし、\[HoloLens Emulator\]
     (HoloLens エミュレーター) を選びます。
 
 2.  \[デバッグ\]、\[デバッグなしで開始\] の順に選びます。
 
-**アプリのテスト**
+## アプリのテスト
 
 これでアプリを配置したので、キューブをあちこち移動して、目の前にキューブが浮かび上がるのを観察します。
 
-**関連項目**
+## 関連項目
 
 -   [*Unity
     開発の概要*](https://developer.microsoft.com/ja-jp/windows/holographic/unity_development_overview)

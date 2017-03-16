@@ -188,7 +188,71 @@ public class WorldCursor : MonoBehaviour
 -   GazeGestureManager スクリプトを \[Hierarchy\] パネルのOrigamiCollection オブジェクトにドラッグします。
 -   Visual Studio で GazeGestureManagerスクリプトを開き、次のコードを追加します。
 
-GazeGestureManager.cs \[表示\]
+GazeGestureManager.cs 
+```cs
+using UnityEngine;
+using UnityEngine.VR.WSA.Input;
+
+public class GazeGestureManager : MonoBehaviour
+{
+    public static GazeGestureManager Instance { get; private set; }
+
+    // Represents the hologram that is currently being gazed at.
+    public GameObject FocusedObject { get; private set; }
+
+    GestureRecognizer recognizer;
+
+    // Use this for initialization
+    void Awake()
+    {
+        Instance = this;
+
+        // Set up a GestureRecognizer to detect Select gestures.
+        recognizer = new GestureRecognizer();
+        recognizer.TappedEvent += (source, tapCount, ray) =&gt;
+        {
+            // Send an OnSelect message to the focused object and its ancestors.
+            if (FocusedObject != null)
+            {
+                FocusedObject.SendMessageUpwards(&quot;OnSelect&quot;);
+            }
+        };
+        recognizer.StartCapturingGestures();
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        // Figure out which hologram is focused this frame.
+        GameObject oldFocusObject = FocusedObject;
+
+        // Do a raycast into the world based on the user&#39;s
+        // head position and orientation.
+        var headPosition = Camera.main.transform.position;
+        var gazeDirection = Camera.main.transform.forward;
+
+        RaycastHit hitInfo;
+        if (Physics.Raycast(headPosition, gazeDirection, out hitInfo))
+        {
+            // If the raycast hit a hologram, use that as the focused object.
+            FocusedObject = hitInfo.collider.gameObject;
+        }
+        else
+        {
+            // If the raycast did not hit a hologram, clear the focused object.
+            FocusedObject = null;
+        }
+
+        // If the focused object changed this frame,
+        // start detecting fresh gestures again.
+        if (FocusedObject != oldFocusObject)
+        {
+            recognizer.CancelGestures();
+            recognizer.StartCapturingGestures();
+        }
+    }
+}
+```
 
 -   \[Scripts\] フォルダーでもう 1つスクリプトを作成し、今回は「SphereCommands」という名前を付けます。
 -   \[Hierarchy\] ビューの OrigamiCollectionオブジェクトを展開します。
@@ -196,7 +260,24 @@ GazeGestureManager.cs \[表示\]
 -   SphereCommands スクリプトを \[Hierarchy\] パネルの Sphere2オブジェクトにドラッグします。
 -   編集のために Visual Studioでスクリプトを開き、スクリプト既定のコードを次のコードに置き換えます。
 
-SphereCommands.cs \[表示\]
+SphereCommands.cs 
+```cs
+using UnityEngine;
+
+public class SphereCommands : MonoBehaviour
+{
+    // Called by GazeGestureManager when the user performs a Select gesture
+    void OnSelect()
+    {
+        // If the sphere has no Rigidbody component, add one to enable physics.
+        if (!this.GetComponent&lt;Rigidbody&gt;())
+        {
+            var rigidbody = this.gameObject.AddComponent&lt;Rigidbody&gt;();
+            rigidbody.collisionDetectionMode = CollisionDetectionMode.Continuous;
+        }
+    }
+}
+```
 
 -   アプリをエクスポートしてビルドし、HoloLens に配置します。
 -   球体の １ つを見ます。
@@ -218,12 +299,107 @@ SphereCommands.cs \[表示\]
 -   Visual Studio で SpeechManager スクリプトを開きます。
 -   次のコードをコピーして SpeechManager.cs に貼り付け、\[すべて保存\]をクリックします。
 
-SpeechManager.cs \[表示\]
+SpeechManager.cs 
+```cs
+using System.Collections.Generic;
+using System.Linq;
+using UnityEngine;
+using UnityEngine.Windows.Speech;
+
+public class SpeechManager : MonoBehaviour
+{
+    KeywordRecognizer keywordRecognizer = null;
+    Dictionary&lt;string, System.Action&gt; keywords = new Dictionary&lt;string, System.Action&gt;();
+
+    // Use this for initialization
+    void Start()
+    {
+        keywords.Add(&quot;Reset world&quot;, () =&gt;
+        {
+            // Call the OnReset method on every descendant object.
+            this.BroadcastMessage(&quot;OnReset&quot;);
+        });
+
+        keywords.Add(&quot;Drop Sphere&quot;, () =&gt;
+        {
+            var focusObject = GazeGestureManager.Instance.FocusedObject;
+            if (focusObject != null)
+            {
+                // Call the OnDrop method on just the focused object.
+                focusObject.SendMessage(&quot;OnDrop&quot;);
+            }
+        });
+
+        // Tell the KeywordRecognizer about our keywords.
+        keywordRecognizer = new KeywordRecognizer(keywords.Keys.ToArray());
+
+        // Register a callback for the KeywordRecognizer and start recognizing!
+        keywordRecognizer.OnPhraseRecognized += KeywordRecognizer_OnPhraseRecognized;
+        keywordRecognizer.Start();
+    }
+
+    private void KeywordRecognizer_OnPhraseRecognized(PhraseRecognizedEventArgs args)
+    {
+        System.Action keywordAction;
+        if (keywords.TryGetValue(args.text, out keywordAction))
+        {
+            keywordAction.Invoke();
+        }
+    }
+}
+```
 
 -   Visual Studio で SphereCommands スクリプトを開きます。
 -   このスクリプトを次のように更新します。
 
-SphereCommands.cs \[表示\]
+SphereCommands.cs
+```cs
+using UnityEngine;
+
+public class SphereCommands : MonoBehaviour
+{
+    Vector3 originalPosition;
+
+    // Use this for initialization
+    void Start()
+    {
+        // Grab the original local position of the sphere when the app starts.
+        originalPosition = this.transform.localPosition;
+    }
+
+    // Called by GazeGestureManager when the user performs a Select gesture
+    void OnSelect()
+    {
+        // If the sphere has no Rigidbody component, add one to enable physics.
+        if (!this.GetComponent&lt;Rigidbody&gt;())
+        {
+            var rigidbody = this.gameObject.AddComponent&lt;Rigidbody&gt;();
+            rigidbody.collisionDetectionMode = CollisionDetectionMode.Continuous;
+        }
+    }
+
+    // Called by SpeechManager when the user says the &quot;Reset world&quot; command
+    void OnReset()
+    {
+        // If the sphere has a Rigidbody component, remove it to disable physics.
+        var rigidbody = this.GetComponent&lt;Rigidbody&gt;();
+        if (rigidbody != null)
+        {
+            DestroyImmediate(rigidbody);
+        }
+
+        // Put the sphere back into its original local position.
+        this.transform.localPosition = originalPosition;
+    }
+
+    // Called by SpeechManager when the user says the &quot;Drop sphere&quot; command
+    void OnDrop()
+    {
+        // Just do the same logic as a Select gesture.
+        OnSelect();
+    }
+}
+```
 
 -   アプリをエクスポートしてビルドし、HoloLens に配置します。
 -   球体の １ つを見て、「Drop Sphere」 と発話します。
@@ -254,7 +430,77 @@ SphereCommands.cs \[表示\]
 -   SphereSounds をドラッグして、\[Hierarchy\] パネルの Sphere1 オブジェクトとSphere2 オブジェクトにドロップします。
 -   Visual Studio で SphereSounds を開き、次のようにコードを更新して \[すべて保存\] をクリックします。
 
-SphereSounds.cs \[表示\]
+SphereSounds.cs 
+```cs
+using UnityEngine;
+
+public class SphereSounds : MonoBehaviour
+{
+    AudioSource audioSource = null;
+    AudioClip impactClip = null;
+    AudioClip rollingClip = null;
+
+    bool rolling = false;
+
+    void Start()
+    {
+        // Add an AudioSource component and set up some defaults
+        audioSource = gameObject.AddComponent&lt;AudioSource&gt;();
+        audioSource.playOnAwake = false;
+        audioSource.spatialize = true;
+        audioSource.spatialBlend = 1.0f;
+        audioSource.dopplerLevel = 0.0f;
+        audioSource.rolloffMode = AudioRolloffMode.Logarithmic;
+        audioSource.maxDistance = 20f;
+
+        // Load the Sphere sounds from the Resources folder
+        impactClip = Resources.Load&lt;AudioClip&gt;(&quot;Impact&quot;);
+        rollingClip = Resources.Load&lt;AudioClip&gt;(&quot;Rolling&quot;);
+    }
+
+    // Occurs when this object starts colliding with another object
+    void OnCollisionEnter(Collision collision)
+    {
+        // Play an impact sound if the sphere impacts strongly enough.
+        if (collision.relativeVelocity.magnitude &gt;= 0.1f)
+        {
+            audioSource.clip = impactClip;
+            audioSource.Play();
+        }
+    }
+
+    // Occurs each frame that this object continues to collide with another object
+    void OnCollisionStay(Collision collision)
+    {
+        Rigidbody rigid = this.gameObject.GetComponent&lt;Rigidbody&gt;();
+
+        // Play a rolling sound if the sphere is rolling fast enough.
+        if (!rolling &amp;&amp; rigid.velocity.magnitude &gt;= 0.01f)
+        {
+            rolling = true;
+            audioSource.clip = rollingClip;
+            audioSource.Play();
+        }
+        // Stop the rolling sound if rolling slows down.
+        else if (rolling &amp;&amp; rigid.velocity.magnitude &lt; 0.01f)
+        {
+            rolling = false;
+            audioSource.Stop();
+        }
+    }
+
+    // Occurs when this object stops colliding with another object
+    void OnCollisionExit(Collision collision)
+    {
+        // Stop the rolling sound if the object falls off and stops colliding.
+        if (rolling)
+        {
+            rolling = false;
+            audioSource.Stop();
+        }
+    }
+}
+```
 
 -   スクリプトを保存し、Unity に戻ります。
 -   アプリをエクスポートしてビルドし、HoloLens に配置します。
@@ -289,7 +535,62 @@ SphereSounds.cs \[表示\]
 -   TapToPlaceParent スクリプトを Stage オブジェクトにドラッグします。
 -   Visual Studio で TapToPlaceParent スクリプトを開き、次のようにコードを変更します。
 
-TapToPlaceParent.cs \[表示\]
+TapToPlaceParent.cs 
+```cs
+using UnityEngine;
+
+public class TapToPlaceParent : MonoBehaviour
+{
+    bool placing = false;
+
+    // Called by GazeGestureManager when the user performs a Select gesture
+    void OnSelect()
+    {
+        // On each Select gesture, toggle whether the user is in placing mode.
+        placing = !placing;
+
+        // If the user is in placing mode, display the spatial mapping mesh.
+        if (placing)
+        {
+            SpatialMapping.Instance.DrawVisualMeshes = true;
+        }
+        // If the user is not in placing mode, hide the spatial mapping mesh.
+        else
+        {
+            SpatialMapping.Instance.DrawVisualMeshes = false;
+        }
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        // If the user is in placing mode,
+        // update the placement to match the user&#39;s gaze.
+
+        if (placing)
+        {
+            // Do a raycast into the world that will only hit the Spatial Mapping mesh.
+            var headPosition = Camera.main.transform.position;
+            var gazeDirection = Camera.main.transform.forward;
+
+            RaycastHit hitInfo;
+            if (Physics.Raycast(headPosition, gazeDirection, out hitInfo,
+                30.0f, SpatialMapping.PhysicsRaycastMask))
+            {
+                // Move this object&#39;s parent object to
+                // where the raycast hit the Spatial Mapping mesh.
+                this.transform.parent.position = hitInfo.point;
+
+                // Rotate this object&#39;s parent object to face the user.
+                Quaternion toQuat = Camera.main.transform.localRotation;
+                toQuat.x = 0;
+                toQuat.z = 0;
+                this.transform.parent.rotation = toQuat;
+            }
+        }
+    }
+}
+```
 
 -   アプリをエクスポートしてビルドし、配置します。
 -   これで、ゲームに視線を送り、「選ぶ」ジェスチャーを使ってゲームを新しい場所に移動して、再び「選ぶ」ジェスチャーを行うと、ゲームを特定の場所に移動できるようになります。
@@ -312,7 +613,28 @@ TapToPlaceParent.cs \[表示\]
 -   HitTarget スクリプトを Target オブジェクトにドラッグします。
 -   Visual Studio で HitTarget スクリプトを開き、次のようにコードを変更します。
 
-HitTarget.cs \[表示\]
+HitTarget.cs 
+```cs
+using UnityEngine;
+
+public class HitTarget : MonoBehaviour
+{
+    // These public fields become settable properties in the Unity editor.
+    public GameObject underworld;
+    public GameObject objectToHide;
+
+    // Occurs when this object starts colliding with another object
+    void OnCollisionEnter(Collision collision)
+    {
+        // Hide the stage and show the underworld.
+        objectToHide.SetActive(false);
+        underworld.SetActive(true);
+
+        // Disable Spatial Mapping to let the spheres enter the underworld.
+        SpatialMapping.Instance.MappingEnabled = false;
+    }
+}
+```
 
 -   Unity で、Target オブジェクトを選びます。
 -   2 つのパブリック プロパティが Hit Target コンポーネントに表示されるようになります。そこで次のようにして、今回のシーンでオブジェクトを参照する必要があります。

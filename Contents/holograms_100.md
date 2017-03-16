@@ -11,8 +11,8 @@
 
 ## チュートリアルの内容
 
--   [*1 第 1 章 –
-    プロジェクトの新規作成*](https://developer.microsoft.com/ja-jp/windows/holographic/holograms_100#chapter_1_-_create_a_new_project)
+-   [* 第 1 章 –
+    プロジェクトの新規作成*](holograms_100.md#第-1-章--プロジェクトの新規作成)
 
 -   [*2 第 2 章 -
     カメラのセットアップ*](https://developer.microsoft.com/ja-jp/windows/holographic/holograms_100#chapter_2_-_setup_the_camera)

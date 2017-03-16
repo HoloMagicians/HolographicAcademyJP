@@ -28,29 +28,21 @@ Holographic Platform と HoloLens の核となる機能を示します。
 
 ## チュートリアルの内容
 
--   [*1 第 １ 章 -
-    「ホログラム」の世界*](https://developer.microsoft.com/ja-jp/windows/holographic/holograms_101#chapter_1_-_.22holo.22_world)
+-   [第 1 章 -「ホログラム」の世界](holograms_101.md#第-1-章---ホログラムの世界)
 
--   [*2 第 2 章 –
-    視線*](https://developer.microsoft.com/ja-jp/windows/holographic/holograms_101#chapter_2_-_gaze)
+-   [第 2 章 – 視線](holograms_101.md#第-2-章--視線)
 
--   [*3 第 3 章 –
-    ジェスチャー*](https://developer.microsoft.com/ja-jp/windows/holographic/holograms_101#chapter_3_-_gestures)
+-   [第 3 章 – ジェスチャー](holograms_101.md#第-3-章--ジェスチャー)
 
--   [*4 第 4 章 –
-    音声*](https://developer.microsoft.com/ja-jp/windows/holographic/holograms_101#chapter_4_-_voice)
+-   [第 4 章 – 音声](holograms_101.md#第-4-章--音声)
 
--   [*5 第 5 章 –
-    空間音響*](https://developer.microsoft.com/ja-jp/windows/holographic/holograms_101#chapter_5_-_spatial_sound)
+-   [第 5 章 – 空間音響](holograms_101.md#第-5-章--空間音響)
 
--   [*6 第 6 章 –
-    空間マッピング*](https://developer.microsoft.com/ja-jp/windows/holographic/holograms_101#chapter_6_-_spatial_mapping)
+-   [第 6 章 – 空間マッピング](holograms_101.md#第-6-章--空間マッピング)
 
--   [*7 第 7 章 –
-    ホログラフィックを楽しむ*](https://developer.microsoft.com/ja-jp/windows/holographic/holograms_101#chapter_7_-_holographic_fun)
+-   [第 7 章 – ホログラフィックを楽しむ](holograms_101.md#第-7-章--ホログラフィックを楽しむ)
 
--   [*8
-    終わりに*](https://developer.microsoft.com/ja-jp/windows/holographic/holograms_101#the_end)
+-   [終わりに](holograms_101.md#終わりに)
 
 ## 第 1 章 - 「ホログラム」の世界
 

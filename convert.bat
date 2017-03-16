@@ -7,7 +7,7 @@ mkdir output
 
 
 
-xcopy "Chapter 1" "output" /e /y
+xcopy "Contents\*.md" "output" /e /y
 
 
 
@@ -15,7 +15,7 @@ xcopy "Chapter 1" "output" /e /y
 cd output 
 
 
-"C:\Program Files (x86)\Pandoc\pandoc" --reference-docx=..\reference.docx -o HolographicAcademyJP.docx Contents\holograms_100.md 
+"C:\Program Files (x86)\Pandoc\pandoc" --reference-docx=..\reference.docx -o HolographicAcademyJP.docx holograms_100.md 
 
 
 

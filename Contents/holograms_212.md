@@ -38,12 +38,12 @@
 
 ## チュートリアルの内容
 
--   [Unity のセットアップ](https://developer.microsoft.com/ja-jp/windows/holographic/holograms_212#unity_setup)
--   [第 1 章 – 認知](https://developer.microsoft.com/ja-jp/windows/holographic/holograms_212#chapter_1_-_awareness)
--   [第 2 章 – 確認応答](https://developer.microsoft.com/ja-jp/windows/holographic/holograms_212#chapter_2_-_acknowledgement)
--   [第 3 章 - 理解と Dictation Recognizer](https://developer.microsoft.com/ja-jp/windows/holographic/holograms_212#chapter_3_-_understanding_and_the_dictation_recognizer)
--   [第 4 章 - Grammar Recognizer](https://developer.microsoft.com/ja-jp/windows/holographic/holograms_212#chapter_4_-_grammar_recognizer)
--   [終わりに](https://developer.microsoft.com/ja-jp/windows/holographic/holograms_212#the_end)
+-   [Unity のセットアップ](holograms_212.md#unity-のセットアップ)
+-   [第 1 章 – 認知](holograms_212.md#第-1-章--認知)
+-   [第 2 章 – 確認応答](holograms_212.md#第-2-章--確認応答)
+-   [第 3 章 - 理解と Dictation Recognizer](holograms_212.md#第-3-章---理解と-dictation-recognizer)
+-   [第 4 章 - Grammar Recognizer](holograms_212.md#第-4-章---grammar-recognizer)
+-   [終わりに](holograms_212.md#終わりに)
 
 ## Unity のセットアップ
 

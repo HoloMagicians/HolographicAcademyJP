@@ -2,7 +2,7 @@
 
 [*視線*](https://developer.microsoft.com/ja-jp/windows/holographic/gaze)は最初の入力形式で、ユーザーの意図や認知を明らかにします。ホログラム 210 （別名、プロジェクト エクスプローラー) は、Windows Holographic の視線関連の考え方に深く関わっています。ここでは、これまでのカーソルとホログラムに状況認知を加え、ユーザーの視線をアプリが認識し、これを利用するようにします。
 
-ここでは気さくな宇宙飛行士を使って視線の考え方を学びます。[ホログラム 101](https://developer.microsoft.com/ja-jp/windows/holographic/holograms_101) では、視線に追従するだけのシンプルなカーソルを導入しました。今度は、このカーソルを以下のように少し高度にします。
+ここでは気さくな宇宙飛行士を使って視線の考え方を学びます。[ホログラム 101](holograms_101.md) では、視線に追従するだけのシンプルなカーソルを導入しました。今度は、このカーソルを以下のように少し高度にします。
 
 -   カーソルとホログラムに視線を認識させます。つまり、ユーザーが見ている場所と見ていない場所に応じてカーソルとホログラムを両方変化させます。これにより、カーソルとホログラムに状況を認知させます。
 -   カーソルとホログラムにフィードバックを追加し、ターゲットについての多くの状況をユーザーに提供します。このようなフィードバックには、オーディオやビジュアル効果を使用できます。
@@ -29,16 +29,16 @@
 
 ## チュートリアルの内容
 
--   [第 1 章 - Unity のセットアップ](https://developer.microsoft.com/ja-jp/windows/holographic/holograms_210#chapter_1_-_unity_setup)
-    -   [1.1 HoloLens 用の Unity の設定](https://developer.microsoft.com/ja-jp/windows/holographic/holograms_210#unity_settings_for_hololens)
-    -   [1.2 アート アセットのインポート](https://developer.microsoft.com/ja-jp/windows/holographic/holograms_210#import_art_assets)
-    -   [1.3 シーンのセットアップ](https://developer.microsoft.com/ja-jp/windows/holographic/holograms_210#setup_the_scene)
-    -   [1.4 プロジェクトのビルド](https://developer.microsoft.com/ja-jp/windows/holographic/holograms_210#build_the_project)
--   [第 2 章 - カーソルとターゲット フィードバック](https://developer.microsoft.com/ja-jp/windows/holographic/holograms_210#chapter_2_-_cursor_and_target_feedback)
--   [第 3 章 - ターゲット指定のテクニック](https://developer.microsoft.com/ja-jp/windows/holographic/holograms_210#chapter_3_-_targeting_techniques)
--   [第 4 章 - 方向インジケーター](https://developer.microsoft.com/ja-jp/windows/holographic/holograms_210#chapter_4_-_directional_indicator)
--   [第 5 章 - ビルボーディング](https://developer.microsoft.com/ja-jp/windows/holographic/holograms_210#chapter_5_-_billboarding)
--   [第 6 章 - 追従](https://developer.microsoft.com/ja-jp/windows/holographic/holograms_210#chapter_6_-_tag-along)
+-   [第 1 章 - Unity のセットアップ](holograms_210.md#第-1-章---unity-のセットアップ)
+    -   [1.1 HoloLens 用の Unity の設定](holograms_210.md#hololens-用の-unity-の設定)
+    -   [1.2 アート アセットのインポート](holograms_210.md#アート-アセットのインポート)
+    -   [1.3 シーンのセットアップ](holograms_210.md#シーンのセットアップ)
+    -   [1.4 プロジェクトのビルド](holograms_210.md#プロジェクトのビルド)
+-   [第 2 章 - カーソルとターゲット フィードバック](holograms_210.md#第-2-章---カーソルとターゲットのフィードバック)
+-   [第 3 章 - ターゲット指定のテクニック](holograms_210.md#第-3-章---ターゲット指定のテクニック)
+-   [第 4 章 - 方向インジケーター](holograms_210.md#第-4-章---方向インジケーター)
+-   [第 5 章 - ビルボーディング](holograms_210.md#第-5-章---ビルボーディング)
+-   [第 6 章 - 追従](holograms_210.md#第-6-章---追従)
 
 ## 第 1 章 - Unity のセットアップ
 

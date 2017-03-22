@@ -168,10 +168,10 @@ using UnityEngine;
 
 namespace Academy.HoloToolkit.Unity
 {
-    /// &lt;summary&gt;
+    /// <summary>
     /// GazeManager determines the location of the user&#39;s gaze, hit position and normals.
-    /// &lt;/summary&gt;
-    public class GazeManager : Singleton&lt;GazeManager&gt;
+    /// </summary>
+    public class GazeManager : Singleton<GazeManager>
     {
         [Tooltip(&quot;Maximum gaze distance for calculating a hit.&quot;)]
         public float MaxGazeDistance = 5.0f;
@@ -179,25 +179,25 @@ namespace Academy.HoloToolkit.Unity
         [Tooltip(&quot;Select the layers raycast should target.&quot;)]
         public LayerMask RaycastLayerMask = Physics.DefaultRaycastLayers;
 
-        /// &lt;summary&gt;
+        /// <summary>
         /// Physics.Raycast result is true if it hits a Hologram.
-        /// &lt;/summary&gt;
+        /// </summary>
         public bool Hit { get; private set; }
 
-        /// &lt;summary&gt;
+        /// <summary>
         /// HitInfo property gives access
         /// to RaycastHit public members.
-        /// &lt;/summary&gt;
+        /// </summary>
         public RaycastHit HitInfo { get; private set; }
 
-        /// &lt;summary&gt;
+        /// <summary>
         /// Position of the user&#39;s gaze.
-        /// &lt;/summary&gt;
+        /// </summary>
         public Vector3 Position { get; private set; }
 
-        /// &lt;summary&gt;
+        /// <summary>
         /// RaycastHit Normal direction.
-        /// &lt;/summary&gt;
+        /// </summary>
         public Vector3 Normal { get; private set; }
 
         private GazeStabilizer gazeStabilizer;
@@ -231,9 +231,9 @@ namespace Academy.HoloToolkit.Unity
             UpdateRaycast();
         }
 
-        /// &lt;summary&gt;
+        /// <summary>
         /// Calculates the Raycast hit position and normal.
-        /// &lt;/summary&gt;
+        /// </summary>
         private void UpdateRaycast()
         {
             /* TODO: DEVELOPER CODING EXERCISE 2.a */
@@ -294,14 +294,14 @@ using UnityEngine;
 
 namespace Academy.HoloToolkit.Unity
 {
-    /// &lt;summary&gt;
+    /// <summary>
     /// CursorManager class takes Cursor GameObjects.
     /// One that is on Holograms and another off Holograms.
     /// Shows the appropriate Cursor when a Hologram is hit.
     /// Places the appropriate Cursor at the hit position.
     /// Matches the Cursor normal to the hit surface.
-    /// &lt;/summary&gt;
-    public class CursorManager : Singleton&lt;CursorManager&gt;
+    /// </summary>
+    public class CursorManager : Singleton<CursorManager>
     {
         [Tooltip(&quot;Drag the Cursor object to show when it hits a hologram.&quot;)]
         public GameObject CursorOnHolograms;
@@ -381,11 +381,11 @@ InteractibleManager.cs
 using Academy.HoloToolkit.Unity;
 using UnityEngine;
 
-/// &lt;summary&gt;
+/// <summary>
 /// InteractibleManager keeps tracks of which GameObject
 /// is currently in focus.
-/// &lt;/summary&gt;
-public class InteractibleManager : Singleton&lt;InteractibleManager&gt;
+/// </summary>
+public class InteractibleManager : Singleton<InteractibleManager>
 {
     public GameObject FocusedGameObject { get; private set; }
 
@@ -426,7 +426,7 @@ public class InteractibleManager : Singleton&lt;InteractibleManager&gt;
 
             if (FocusedGameObject != null)
             {
-                if (FocusedGameObject.GetComponent&lt;Interactible&gt;() != null)
+                if (FocusedGameObject.GetComponent<Interactible>() != null)
                 {
                     // 2.c: Send a GazeEntered message to the FocusedGameObject.
                     FocusedGameObject.SendMessage(&quot;GazeEntered&quot;);
@@ -439,7 +439,7 @@ public class InteractibleManager : Singleton&lt;InteractibleManager&gt;
     {
         if (oldFocusedGameObject != null)
         {
-            if (oldFocusedGameObject.GetComponent&lt;Interactible&gt;() != null)
+            if (oldFocusedGameObject.GetComponent<Interactible>() != null)
             {
                 // 2.c: Send a GazeExited message to the oldFocusedGameObject.
                 oldFocusedGameObject.SendMessage(&quot;GazeExited&quot;);
@@ -454,10 +454,10 @@ Interactible.cs
 ```cs
 using UnityEngine;
 
-/// &lt;summary&gt;
+/// <summary>
 /// The Interactible class flags a Game Object as being &quot;Interactible&quot;.
 /// Determines what happens when an Interactible is being gazed at.
-/// &lt;/summary&gt;
+/// </summary>
 public class Interactible : MonoBehaviour
 {
     [Tooltip(&quot;Audio clip to play when interacting with this hologram.&quot;)]
@@ -468,13 +468,13 @@ public class Interactible : MonoBehaviour
 
     void Start()
     {
-        defaultMaterials = GetComponent&lt;Renderer&gt;().materials;
+        defaultMaterials = GetComponent<Renderer>().materials;
 
         // Add a BoxCollider if the interactible does not contain one.
-        Collider collider = GetComponentInChildren&lt;Collider&gt;();
+        Collider collider = GetComponentInChildren<Collider>();
         if (collider == null)
         {
-            gameObject.AddComponent&lt;BoxCollider&gt;();
+            gameObject.AddComponent<BoxCollider>();
         }
 
         EnableAudioHapticFeedback();
@@ -485,10 +485,10 @@ public class Interactible : MonoBehaviour
         // If this hologram has an audio clip, add an AudioSource with this clip.
         if (TargetFeedbackSound != null)
         {
-            audioSource = GetComponent&lt;AudioSource&gt;();
+            audioSource = GetComponent<AudioSource>();
             if (audioSource == null)
             {
-                audioSource = gameObject.AddComponent&lt;AudioSource&gt;();
+                audioSource = gameObject.AddComponent<AudioSource>();
             }
 
             audioSource.clip = TargetFeedbackSound;
@@ -502,7 +502,7 @@ public class Interactible : MonoBehaviour
 
     void GazeEntered()
     {
-        for (int i = 0; i &lt; defaultMaterials.Length; i++)
+        for (int i = 0; i < defaultMaterials.Length; i++)
         {
             // 2.d: Uncomment the below line to highlight the material when gaze enters.
             defaultMaterials[i].SetFloat(&quot;_Highlight&quot;, .25f);
@@ -511,7 +511,7 @@ public class Interactible : MonoBehaviour
 
     void GazeExited()
     {
-        for (int i = 0; i &lt; defaultMaterials.Length; i++)
+        for (int i = 0; i < defaultMaterials.Length; i++)
         {
             // 2.d: Uncomment the below line to remove highlight on material when gaze exits.
             defaultMaterials[i].SetFloat(&quot;_Highlight&quot;, 0f);
@@ -520,7 +520,7 @@ public class Interactible : MonoBehaviour
 
     void OnSelect()
     {
-        for (int i = 0; i &lt; defaultMaterials.Length; i++)
+        for (int i = 0; i < defaultMaterials.Length; i++)
         {
             defaultMaterials[i].SetFloat(&quot;_Highlight&quot;, .5f);
         }
@@ -565,10 +565,10 @@ using UnityEngine;
 
 namespace Academy.HoloToolkit.Unity
 {
-    /// &lt;summary&gt;
+    /// <summary>
     /// GazeManager determines the location of the user&#39;s gaze, hit position and normals.
-    /// &lt;/summary&gt;
-    public class GazeManager : Singleton&lt;GazeManager&gt;
+    /// </summary>
+    public class GazeManager : Singleton<GazeManager>
     {
         [Tooltip(&quot;Maximum gaze distance for calculating a hit.&quot;)]
         public float MaxGazeDistance = 5.0f;
@@ -576,25 +576,25 @@ namespace Academy.HoloToolkit.Unity
         [Tooltip(&quot;Select the layers raycast should target.&quot;)]
         public LayerMask RaycastLayerMask = Physics.DefaultRaycastLayers;
 
-        /// &lt;summary&gt;
+        /// <summary>
         /// Physics.Raycast result is true if it hits a Hologram.
-        /// &lt;/summary&gt;
+        /// </summary>
         public bool Hit { get; private set; }
 
-        /// &lt;summary&gt;
+        /// <summary>
         /// HitInfo property gives access
         /// to RaycastHit public members.
-        /// &lt;/summary&gt;
+        /// </summary>
         public RaycastHit HitInfo { get; private set; }
 
-        /// &lt;summary&gt;
+        /// <summary>
         /// Position of the user&#39;s gaze.
-        /// &lt;/summary&gt;
+        /// </summary>
         public Vector3 Position { get; private set; }
 
-        /// &lt;summary&gt;
+        /// <summary>
         /// RaycastHit Normal direction.
-        /// &lt;/summary&gt;
+        /// </summary>
         public Vector3 Normal { get; private set; }
 
         private GazeStabilizer gazeStabilizer;
@@ -606,7 +606,7 @@ namespace Academy.HoloToolkit.Unity
             /* TODO: DEVELOPER CODING EXERCISE 3.a */
 
             // 3.a: GetComponent GazeStabilizer and assign it to gazeStabilizer.
-            gazeStabilizer = GetComponent&lt;GazeStabilizer&gt;();
+            gazeStabilizer = GetComponent<GazeStabilizer>();
         }
 
         private void Update()
@@ -628,9 +628,9 @@ namespace Academy.HoloToolkit.Unity
             UpdateRaycast();
         }
 
-        /// &lt;summary&gt;
+        /// <summary>
         /// Calculates the Raycast hit position and normal.
-        /// &lt;/summary&gt;
+        /// </summary>
         private void UpdateRaycast()
         {
             /* TODO: DEVELOPER CODING EXERCISE 2.a */
@@ -758,10 +758,10 @@ Interactible.cs
 ```cs
 using UnityEngine;
 
-/// &lt;summary&gt;
+/// <summary>
 /// The Interactible class flags a Game Object as being &quot;Interactible&quot;.
 /// Determines what happens when an Interactible is being gazed at.
-/// &lt;/summary&gt;
+/// </summary>
 public class Interactible : MonoBehaviour
 {
     [Tooltip(&quot;Audio clip to play when interacting with this hologram.&quot;)]
@@ -772,13 +772,13 @@ public class Interactible : MonoBehaviour
 
     void Start()
     {
-        defaultMaterials = GetComponent&lt;Renderer&gt;().materials;
+        defaultMaterials = GetComponent<Renderer>().materials;
 
         // Add a BoxCollider if the interactible does not contain one.
-        Collider collider = GetComponentInChildren&lt;Collider&gt;();
+        Collider collider = GetComponentInChildren<Collider>();
         if (collider == null)
         {
-            gameObject.AddComponent&lt;BoxCollider&gt;();
+            gameObject.AddComponent<BoxCollider>();
         }
 
         EnableAudioHapticFeedback();
@@ -789,10 +789,10 @@ public class Interactible : MonoBehaviour
         // If this hologram has an audio clip, add an AudioSource with this clip.
         if (TargetFeedbackSound != null)
         {
-            audioSource = GetComponent&lt;AudioSource&gt;();
+            audioSource = GetComponent<AudioSource>();
             if (audioSource == null)
             {
-                audioSource = gameObject.AddComponent&lt;AudioSource&gt;();
+                audioSource = gameObject.AddComponent<AudioSource>();
             }
 
             audioSource.clip = TargetFeedbackSound;
@@ -806,7 +806,7 @@ public class Interactible : MonoBehaviour
 
     void GazeEntered()
     {
-        for (int i = 0; i &lt; defaultMaterials.Length; i++)
+        for (int i = 0; i < defaultMaterials.Length; i++)
         {
             // 2.d: Uncomment the below line to highlight the material when gaze enters.
             defaultMaterials[i].SetFloat(&quot;_Highlight&quot;, .25f);
@@ -815,7 +815,7 @@ public class Interactible : MonoBehaviour
 
     void GazeExited()
     {
-        for (int i = 0; i &lt; defaultMaterials.Length; i++)
+        for (int i = 0; i < defaultMaterials.Length; i++)
         {
             // 2.d: Uncomment the below line to remove highlight on material when gaze exits.
             defaultMaterials[i].SetFloat(&quot;_Highlight&quot;, 0f);
@@ -824,7 +824,7 @@ public class Interactible : MonoBehaviour
 
     void OnSelect()
     {
-        for (int i = 0; i &lt; defaultMaterials.Length; i++)
+        for (int i = 0; i < defaultMaterials.Length; i++)
         {
             defaultMaterials[i].SetFloat(&quot;_Highlight&quot;, .5f);
         }
@@ -867,9 +867,9 @@ InteractibleAction.cs
 using Academy.HoloToolkit.Unity;
 using UnityEngine;
 
-/// &lt;summary&gt;
+/// <summary>
 /// InteractibleAction performs custom actions when you gaze at the holograms.
-/// &lt;/summary&gt;
+/// </summary>
 public class InteractibleAction : MonoBehaviour
 {
     [Tooltip(&quot;Drag the Tagalong prefab asset you want to display.&quot;)]
@@ -897,11 +897,11 @@ public class InteractibleAction : MonoBehaviour
 
         // 6.b: AddComponent Billboard to instantiatedObjectToTagAlong.
         // So it's always facing the user as they move.
-        instantiatedObjectToTagAlong.AddComponent&lt;Billboard&gt;();
+        instantiatedObjectToTagAlong.AddComponent<Billboard>();
 
         // 6.b: AddComponent SimpleTagalong to instantiatedObjectToTagAlong.
         // So it's always following the user as they move.
-        instantiatedObjectToTagAlong.AddComponent&lt;SimpleTagalong&gt;();
+        instantiatedObjectToTagAlong.AddComponent<SimpleTagalong>();
 
         // 6.b: Set any public properties you wish to experiment with.
     }

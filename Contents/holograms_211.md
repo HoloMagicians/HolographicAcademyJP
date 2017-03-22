@@ -710,7 +710,125 @@ public class GestureAction : MonoBehaviour
 
 AstronautManager.cs でコメントを参考にコーディングを完成するか、以下の完成版のコードをコピーして貼り付けます。
 
-AstronautManager.cs \[表示\]
+AstronautManager.cs 
+
+```cs
+using Academy.HoloToolkit.Unity;
+using System.Collections.Generic;
+using System.Linq;
+using UnityEngine;
+using UnityEngine.Windows.Speech;
+
+public class AstronautManager : Singleton&lt;AstronautManager&gt;
+{
+    float expandAnimationCompletionTime;
+    // Store a bool for whether our astronaut model is expanded or not.
+    bool isModelExpanding = false;
+
+    // KeywordRecognizer object.
+    KeywordRecognizer keywordRecognizer;
+
+    // Defines which function to call when a keyword is recognized.
+    delegate void KeywordAction(PhraseRecognizedEventArgs args);
+    Dictionary&lt;string, KeywordAction&gt; keywordCollection;
+
+    void Start()
+    {
+        keywordCollection = new Dictionary&lt;string, KeywordAction&gt;();
+
+        // Add keyword to start manipulation.
+        keywordCollection.Add(&quot;Move Astronaut&quot;, MoveAstronautCommand);
+
+        // Add keyword Expand Model to call the ExpandModelCommand function.
+        keywordCollection.Add(&quot;Expand Model&quot;, ExpandModelCommand);
+
+        // Add keyword Reset Model to call the ResetModelCommand function.
+        keywordCollection.Add(&quot;Reset Model&quot;, ResetModelCommand);
+
+        // Initialize KeywordRecognizer with the previously added keywords.
+        keywordRecognizer = new KeywordRecognizer(keywordCollection.Keys.ToArray());
+        keywordRecognizer.OnPhraseRecognized += KeywordRecognizer_OnPhraseRecognized;
+        keywordRecognizer.Start();
+    }
+
+    private void KeywordRecognizer_OnPhraseRecognized(PhraseRecognizedEventArgs args)
+    {
+        KeywordAction keywordAction;
+
+        if (keywordCollection.TryGetValue(args.text, out keywordAction))
+        {
+            keywordAction.Invoke(args);
+        }
+    }
+
+    private void MoveAstronautCommand(PhraseRecognizedEventArgs args)
+    {
+        GestureManager.Instance.Transition(GestureManager.Instance.ManipulationRecognizer);
+    }
+
+    private void ResetModelCommand(PhraseRecognizedEventArgs args)
+    {
+        // Reset local variables.
+        isModelExpanding = false;
+
+        // Disable the expanded model.
+        ExpandModel.Instance.ExpandedModel.SetActive(false);
+
+        // Enable the idle model.
+        ExpandModel.Instance.gameObject.SetActive(true);
+
+        // Enable the animators for the next time the model is expanded.
+        Animator[] expandedAnimators = ExpandModel.Instance.ExpandedModel.GetComponentsInChildren&lt;Animator&gt;();
+        foreach (Animator animator in expandedAnimators)
+        {
+            animator.enabled = true;
+        }
+
+        ExpandModel.Instance.Reset();
+    }
+
+    private void ExpandModelCommand(PhraseRecognizedEventArgs args)
+    {
+        // Swap out the current model for the expanded model.
+        GameObject currentModel = ExpandModel.Instance.gameObject;
+
+        ExpandModel.Instance.ExpandedModel.transform.position = currentModel.transform.position;
+        ExpandModel.Instance.ExpandedModel.transform.rotation = currentModel.transform.rotation;
+        ExpandModel.Instance.ExpandedModel.transform.localScale = currentModel.transform.localScale;
+
+        currentModel.SetActive(false);
+        ExpandModel.Instance.ExpandedModel.SetActive(true);
+
+        // Play animation.  Ensure the Loop Time check box is disabled in the inspector for this animation to play it once.
+        Animator[] expandedAnimators = ExpandModel.Instance.ExpandedModel.GetComponentsInChildren&lt;Animator&gt;();
+        // Set local variables for disabling the animation.
+        if (expandedAnimators.Length &gt; 0)
+        {
+            expandAnimationCompletionTime = Time.realtimeSinceStartup + expandedAnimators[0].runtimeAnimatorController.animationClips[0].length * 0.9f;
+        }
+
+        // Set the expand model flag.
+        isModelExpanding = true;
+
+        ExpandModel.Instance.Expand();
+    }
+
+    public void Update()
+    {
+        if (isModelExpanding &amp;&amp; Time.realtimeSinceStartup &gt;= expandAnimationCompletionTime)
+        {
+            isModelExpanding = false;
+
+            Animator[] expandedAnimators = ExpandModel.Instance.ExpandedModel.GetComponentsInChildren&lt;Animator&gt;();
+
+            foreach (Animator animator in expandedAnimators)
+            {
+                animator.enabled = false;
+            }
+        }
+    }
+}
+```
 
 ### ビルドと配置
 

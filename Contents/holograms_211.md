@@ -719,7 +719,7 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.Windows.Speech;
 
-public class AstronautManager : Singleton&lt;AstronautManager&gt;
+public class AstronautManager : Singleton<AstronautManager>
 {
     float expandAnimationCompletionTime;
     // Store a bool for whether our astronaut model is expanded or not.
@@ -730,11 +730,11 @@ public class AstronautManager : Singleton&lt;AstronautManager&gt;
 
     // Defines which function to call when a keyword is recognized.
     delegate void KeywordAction(PhraseRecognizedEventArgs args);
-    Dictionary&lt;string, KeywordAction&gt; keywordCollection;
+    Dictionary<string, KeywordAction> keywordCollection;
 
     void Start()
     {
-        keywordCollection = new Dictionary&lt;string, KeywordAction&gt;();
+        keywordCollection = new Dictionary<string, KeywordAction>();
 
         // Add keyword to start manipulation.
         keywordCollection.Add(&quot;Move Astronaut&quot;, MoveAstronautCommand);
@@ -778,7 +778,7 @@ public class AstronautManager : Singleton&lt;AstronautManager&gt;
         ExpandModel.Instance.gameObject.SetActive(true);
 
         // Enable the animators for the next time the model is expanded.
-        Animator[] expandedAnimators = ExpandModel.Instance.ExpandedModel.GetComponentsInChildren&lt;Animator&gt;();
+        Animator[] expandedAnimators = ExpandModel.Instance.ExpandedModel.GetComponentsInChildren<Animator>();
         foreach (Animator animator in expandedAnimators)
         {
             animator.enabled = true;
@@ -800,9 +800,9 @@ public class AstronautManager : Singleton&lt;AstronautManager&gt;
         ExpandModel.Instance.ExpandedModel.SetActive(true);
 
         // Play animation.  Ensure the Loop Time check box is disabled in the inspector for this animation to play it once.
-        Animator[] expandedAnimators = ExpandModel.Instance.ExpandedModel.GetComponentsInChildren&lt;Animator&gt;();
+        Animator[] expandedAnimators = ExpandModel.Instance.ExpandedModel.GetComponentsInChildren<Animator>();
         // Set local variables for disabling the animation.
-        if (expandedAnimators.Length &gt; 0)
+        if (expandedAnimators.Length > 0)
         {
             expandAnimationCompletionTime = Time.realtimeSinceStartup + expandedAnimators[0].runtimeAnimatorController.animationClips[0].length * 0.9f;
         }
@@ -815,11 +815,11 @@ public class AstronautManager : Singleton&lt;AstronautManager&gt;
 
     public void Update()
     {
-        if (isModelExpanding &amp;&amp; Time.realtimeSinceStartup &gt;= expandAnimationCompletionTime)
+        if (isModelExpanding &amp;&amp; Time.realtimeSinceStartup >= expandAnimationCompletionTime)
         {
             isModelExpanding = false;
 
-            Animator[] expandedAnimators = ExpandModel.Instance.ExpandedModel.GetComponentsInChildren&lt;Animator&gt;();
+            Animator[] expandedAnimators = ExpandModel.Instance.ExpandedModel.GetComponentsInChildren<Animator>();
 
             foreach (Animator animator in expandedAnimators)
             {

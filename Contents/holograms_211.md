@@ -31,13 +31,13 @@
 
 ## チュートリアルの内容
 
--   [Unity のセットアップ](https://developer.microsoft.com/ja-jp/windows/holographic/holograms_211#unity_setup)
--   [第 1 章 – 手の検出とフィードバック](https://developer.microsoft.com/ja-jp/windows/holographic/holograms_211#chapter_1_-_hand_detected_feedback)
--   [第 2 章 – ナビゲーション](https://developer.microsoft.com/ja-jp/windows/holographic/holograms_211#chapter_2_-_navigation)
--   [第 3 章 – 手の誘導](https://developer.microsoft.com/ja-jp/windows/holographic/holograms_211#chapter_3_-_hand_guidance)
--   [第 4 章 – 操縦](https://developer.microsoft.com/ja-jp/windows/holographic/holograms_211#chapter_4_-_manipulation)
--   [第 5 章 – モデルの展開](https://developer.microsoft.com/ja-jp/windows/holographic/holograms_211#chapter_5_-_model_expansion)
--   [終わりに](https://developer.microsoft.com/ja-jp/windows/holographic/holograms_211#the_end)
+-   [Unity のセットアップ](holograms_211.md#unity-のセットアップ)
+-   [第 1 章 – 手の検出とフィードバック](holograms_211.md#第-1-章---手の検出とフィードバック)
+-   [第 2 章 – ナビゲーション](holograms_211.md#第-2-章--ナビゲーション)
+-   [第 3 章 – 手の誘導](holograms_211.md#第-3-章--手の誘導)
+-   [第 4 章 – 操縦](holograms_211.md#第-4-章---操縦)
+-   [第 5 章 – モデルの展開](holograms_211.md#第-5-章---モデルの展開)
+-   [終わりに](holograms_211.md#終わりに)
 
 ## Unity のセットアップ
 

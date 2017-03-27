@@ -27,7 +27,7 @@
 
 ## チュートリアルの内容
 
--   [Unity のセットアップ](holograms_230.md#Unity-のセットアップ)
+-   [Unity のセットアップ](holograms_230.md#unity-のセットアップ)
 -   [第 1 章 - スキャン](holograms_230.md#第-1-章---スキャン)
 -   [第 2 章 - 視覚化](holograms_230.md#第-2-章---視覚化)
 -   [第 3 章 - 処理](holograms_230.md#第-3-章---処理)

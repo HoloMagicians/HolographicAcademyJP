@@ -12,7 +12,7 @@
 
 -   [*適切なツールをインストールして*](https://developer.microsoft.com/ja-jp/windows/holographic/install_the_tools)構成した Windows 10 PC。
 -   ある程度基本的な C\# プログラミング能力。
--   [*ホログラム101*](holograms_101.md)) の修了。
+-   [*ホログラム101*](holograms_101.md) の修了。
 -   [*開発用に構成した*](https://developer.microsoft.com/ja-jp/windows/holographic/Using_Visual_Studio.html#enabling_developer_mode) HoloLens デバイス。
 
 ## プロジェクト ファイル

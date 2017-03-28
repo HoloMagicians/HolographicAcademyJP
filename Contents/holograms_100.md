@@ -291,16 +291,9 @@ Visual Studio
 
 ## 関連項目
 
--   [*Unity
-    開発の概要*](https://developer.microsoft.com/ja-jp/windows/holographic/unity_development_overview)
-
--   [*Unity と Visual Studio による作業のベスト
-    プラクティス*](https://developer.microsoft.com/ja-jp/windows/holographic/best_practices_for_working_with_unity_and_visual_studio)
-
--   [*ホログラム
-    101*](holograms_101.md)
-
--   [*ホログラム
-    101E*](holograms_101e.md)
+-   [*Unity 開発の概要*](https://developer.microsoft.com/ja-jp/windows/holographic/unity_development_overview)
+-   [*Unity と Visual Studio による作業のベスト プラクティス*](https://developer.microsoft.com/ja-jp/windows/holographic/best_practices_for_working_with_unity_and_visual_studio)
+-   [*ホログラム 101*](holograms_101.md)
+-   [*ホログラム 101E*](holograms_101e.md)
 
 

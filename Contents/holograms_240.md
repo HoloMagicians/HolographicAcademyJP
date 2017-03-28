@@ -340,7 +340,7 @@ public class AvatarSelector : MonoBehaviour
 -   Visual Studio で HologramPlacement スクリプトを開きます。
 -   コンテンツを以下のコードに置き換えます。
 
-HologramPlacement.cs\[表示\]
+HologramPlacement.cs
 ```cs
 using UnityEngine;
 using System.Collections.Generic;

@@ -12,9 +12,3 @@
  * [ホログラム 230](Contents/holograms_230.md)
  * [ホログラム 240](Contents/holograms_240.md)
  
-## PDF
-
-MarkdownをビルドしたPDFがこちらにあります。
-
- * [HolographicAcademyJP.pdf](https://www.dropbox.com/s/nfv1htin84qd89u/HolographicAcademyJP.pdf?dl=0)
- 

@@ -298,9 +298,9 @@ Visual Studio
     プラクティス*](https://developer.microsoft.com/ja-jp/windows/holographic/best_practices_for_working_with_unity_and_visual_studio)
 
 -   [*ホログラム
-    101*](https://developer.microsoft.com/ja-jp/windows/holographic/holograms_101)
+    101*](holograms_101.md)
 
 -   [*ホログラム
-    101E*](https://developer.microsoft.com/ja-jp/windows/holographic/holograms_101e)
+    101E*](holograms_101e.md)
 
 

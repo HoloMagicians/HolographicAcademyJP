@@ -15,7 +15,7 @@ Spectator View のセットアップ
 
 複合現実ヘッドセットを着用していると、第三者が同じ体験をしていないことを忘れがちです。SpectatorView は、HoloLens の利用者が見ている世界を、第三者が 2D 画面で見ることができるようにします。Spectator View を使用するには、以下の 4 つの要素が必要です。
 
-1.  [*ホログラフィック共有エクスペリエンス*](https://developer.microsoft.com/ja-jp/windows/mixed-reality/shared_holographic_experiences#pagenotfound)に基づき、第三者の視点を具体的に実現するためにビルドされたアプリ。
+1.  [*ホログラフィック共有エクスペリエンス*](https://developer.microsoft.com/ja-jp/windows/mixed-reality/shared_holographic_experiences)に基づき、第三者の視点を具体的に実現するためにビルドされたアプリ。
 2.  HoloLens を着用し、アプリを使用するユーザー。
 3.  第三者の視点でビデオを録画する Spectator View カメラ装置。
 4.  共有エクスペリエンス アプリを実行し、ホログラムを Spectator View ビデオに合成するデスクトップ PC。
@@ -63,7 +63,7 @@ Spectator View でのビデオのキャプチャ シナリオの例
 
 ## ビデオキャプチャ技法の比較
 
-[*複合現実キャプチャ*](https://developer.microsoft.com/ja-jp/windows/holographic/mixed_reality_capture)
+[*複合現実キャプチャ*](https://developer.microsoft.com/en-us/windows/mixed-reality/mixed_reality_capture)
 (MRC) は、HoloLens 装着者が一人称視点で目にしているものをコンポジットビデオにします。Spectator View は第三者の視点からビデオを生成するため、ビデオを見る人は、ホログラムと HoloLens デバイスを装着しているユーザーが同時に存在する環境を目にすることができます。また、カメラを選択できるため、MRC 画像に使用される HoloLens 組み込みのカメラに比べて、高解像度、高画質の画像を生成できます。そのため、Spectator View は Windows ストアのアプリ画像、マーケティングビデオ、観客向けのライブ ビューイングの投影などに適しています。
 
 <img src="media/image5.jpeg" width="300" height="270">
@@ -74,7 +74,7 @@ Microsoft HoloLens が 2015 年 1 月に発表された当初から、Spectator 
 
 オープンソース版の Spectator Viewでは、設定全体のコストを大きく下げるため、カメラを動かす機能を犠牲にしています。オープンソース プロジェクトでは、HoloLens に固定した外部カメラを使って、ホログラフィック Unity プロジェクトの高解像度画像やビデオを撮影します。**ライブデモの最中は、カメラは動かさず、同じ位置に固定します。** カメラが動くと、ホログラムにぶれやずれが起きる可能性があります。これは、ビデオフレームのタイミングと PC でのホログラムのレンダリングのタイミングが、正確に同期されていないために起こります。そのため、カメラを固定するか、動きを制限することで、HoloLens 装着者が目にしているものに近い映像を生成できます。
 
-アプリを Spectator View対応にするには、[*共有エクスペリエンス*](https://developer.microsoft.com/ja-jp/windows/holographic/holograms_240)アプリをビルドし、そのアプリが HoloLens とデスクトップの Unity エディター内の両方で動作できるようにします。デスクトップ版のアプリには、ビデオフィードとレンダリングされたホログラムを合成する、組み込みの追加コンポーネントを含めます。
+アプリを Spectator View対応にするには、[*共有エクスペリエンス*](https://developer.microsoft.com/ja-jp/windows/mixed-reality/holograms_240)アプリをビルドし、そのアプリが HoloLens とデスクトップの Unity エディター内の両方で動作できるようにします。デスクトップ版のアプリには、ビデオフィードとレンダリングされたホログラムを合成する、組み込みの追加コンポーネントを含めます。
 
 ## ハードウェア購入リスト
 
@@ -91,7 +91,7 @@ Spectator View 装置
 |  HoloLens エミュレーターを含み、ホログラフィック開発用に構成した PC。   |      |
 |  HDMI 出力端子または写真キャプチャ SDK を備えたカメラ。  |  写真とビデオのキャプチャについては、[*Canon EOS 5D Mark III*](https://www.amazon.co.jp/Canon-%E3%83%87%E3%82%B8%E3%82%BF%E3%83%AB%E4%B8%80%E7%9C%BC%E3%83%AC%E3%83%95%E3%82%AB%E3%83%A1%E3%83%A9-EOS-Mark-EOS5DMK3/dp/B007G3SSP8/ref=sr_1_fkmr0_1?ie=UTF8&qid=1488847621&sr=8-1-fkmr0&keywords=Canon+EOS+5D+Mark+III+22.3+MP+F) カメラが Microsoft によって検証済みです。ライブ デモについては、[*Blackmagic Design の Blackmagic Production Camera4K*](https://www.amazon.co.jp/Blackmagic-Design-%E3%82%B7%E3%83%8D%E3%83%9E%E3%82%AB%E3%83%A1%E3%83%A9-Production-5%E3%82%A4%E3%83%B3%E3%83%81%E3%82%BF%E3%83%83%E3%83%81%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3/dp/B00CWLSHYG/ref=sr_1_fkmr0_1?ie=UTF8&qid=148) が Microsoft によって検証済みです。HDMI 出力端子を備えたカメラ (GoPro など) はすべて機能します。Microsoft が公開しているビデオの多くは [*Canon EF 14mm f/2.8L II USM 超広角単焦点レンズ*](https://www.amazon.co.jp/Canon-%E5%8D%98%E7%84%A6%E7%82%B9%E5%BA%83%E8%A7%92%E3%83%AC%E3%83%B3%E3%82%BA-EF14mm-F2-8-%E3%83%95%E3%83%AB%E3%82%B5%E3%82%A4%E3%82%BA%E5%AF%BE%E5%BF%9C/dp/B000V9F3BG/ref=sr_1_1?ie=UTF8&qid=1488847878&sr=8-1&keywords=Canon+EF+14m) を使用していますが、ニーズに合ったレンズを選択してください。  |
 |  カメラからカラー フレームを取得して装置のキャリブレーションを行い、合成シーンのプレビューを表示するための PC 用キャプチャ カード。  |  [*Blackmagic Design の Intensity Pro 4K キャプチャ カード*](https://www.amazon.co.jp/Blackmagic-Design-%E3%82%AD%E3%83%A3%E3%83%97%E3%83%81%E3%83%A3%E3%83%BC%E3%82%AB%E3%83%BC%E3%83%89-Intensity-003062/dp/B00U3QNP7Q/ref=sr_1_1?ie=UTF8&qid=1488848730&sr=8-1&keywords=Intensity+Pro+4K)が Microsoft によって検証済みです。  |
-|  ケーブル  |  カメラをキャプチャ カードに取り付けるための [*HDMI からミニ HDMI への変換ケーブル*](https://www.amazon.co.jp/Amazon%E3%83%99%E3%83%BC%E3%82%B7%E3%83%83%E3%82%AF-%E3%83%8F%E3%82%A4%E3%82%B9%E3%83%94%E3%83%BC%E3%83%89HDMI%E3%82%B1%E3%83%BC%E3%83%96%E3%83%AB-0-9m-%E3%82%BF%E3%82%A4%E3%83%97A%E3%82%AA%E3%82%B9-%E3%83%9F%E3%83%8B%E3%82%BF%E3%258)。使用するカメラに合った HDMI フォーム ファクターを購入します (たとえば、GoPro は[*マイクロ HDMI*](https://www.amazon.co.jp/Amazon%E3%83%99%E3%83%BC%E3%82%B7%E3%83%83%E3%82%AF-%E3%83%8F%E3%82%A4%E3%82%B9%E3%83%94%E3%83%BC%E3%83%89HDMI%E3%82%B1%E3%83%BC%E3%83%96%E3%83%AB-1-8m-%E3%82%BF%E3%82%A4%E3%83%97A%E3%82%AA%E3%82%B9-%E3%83%9E%E3%82%A4%E3%82%AF%E3%258) 経由で出力します)。<br>プレビュー用モニターまたはテレビで合成フィードを表示するための [*HDMI ケーブル*](https://www.amazon.co.jp/Amazon%E3%83%99%E3%83%BC%E3%82%B7%E3%83%83%E3%82%AF-%E3%83%8F%E3%82%A4%E3%82%B9%E3%83%94%E3%83%BC%E3%83%89HDMI%E3%82%B1%E3%83%BC%E3%83%96%E3%83%AB-%E3%82%BF%E3%82%A4%E3%83%97A%E3%82%AA%E3%82%B9-%E3%82%AA%E3%83%BC%E3%83%87%3%82%A3%25)。|
+|  ケーブル  |  カメラをキャプチャ カードに取り付けるための [*HDMI からミニ HDMI への変換ケーブル*](https://www.amazon.co.jp/AmazonBasics-High-Speed-Mini-HDMI-HDMI-Cable/dp/B014I8UHXE?ie=UTF8&psc=1&redirect=true&ref_=oh_aui_detailpage_o03_s00)。使用するカメラに合った HDMI フォーム ファクターを購入します (たとえば、GoPro は[*マイクロ HDMI*](https://www.amazon.co.jp/dp/B014I8U33I/ref=twister_B0198TA40O?_encoding=UTF8&psc=1) 経由で出力します)。<br>プレビュー用モニターまたはテレビで合成フィードを表示するための [*HDMI ケーブル*](https://www.amazon.co.jp/dp/B014I8TC4E/ref=twister_B016I3XG0S?_encoding=UTF8&th=1)。|
 |    HoloLens と カメラをつなぐ、機械加工済みアルミニウム製ブラケット (取り付け金具)。詳細については、OSS プロジェクトの README を参照してください。   |     |
 |    HoloLens のマウント部とカメラのホットシューをつなぐ、3D プリンター製アダプター。詳細については、OSS プロジェクトの README を参照してください。    |     |
 |  ホットシュー アダプターを取り付ける雲台 (ホットシュー ファスナー)。  |  [*雲台*](https://www.amazon.co.jp/Adapter-Cleaning-Photography-Accessories-INC/dp/B010EIQANS/ref=sr_1_1?ie=UTF8&qid=1488850568&sr=8-1&keywords=Fotasy+SCX2+1%2F4-Inch+20+Tripod+Screw)  |
@@ -209,7 +209,7 @@ Spectator View 装置のキャリブレーション
 
 コンポジターは、Unity エディターのウィンドウとして動作します。付属のサンプルプロジェクトにより、コンポジターの DLL をコピーするだけで、Spectator View で機能するようにすべての要素がセットアップされます。
 
-Spectator View には、[*共有エクスペリエンス*](https://developer.microsoft.com/ja-jp/windows/holographic/holograms_240)として動作するアプリが必要です。つまり、HoloLens で起こるアプリの状態変化を、ネットワークに接続する Unity アプリにも送ってその状態を更新する必要があります。
+Spectator View には、[*共有エクスペリエンス*](https://developer.microsoft.com/ja-jp/windows/mixed-reality/holograms_240)として動作するアプリが必要です。つまり、HoloLens で起こるアプリの状態変化を、ネットワークに接続する Unity アプリにも送ってその状態を更新する必要があります。
 
 新しく Unity プロジェクトを作成する場合は、最初にいくつかセットアップが必要になります。
 
@@ -256,8 +256,8 @@ Spectator View には、[*共有エクスペリエンス*](https://developer.mic
 
 ## 関連項目
 
--   [*複合現実キャプチャ*](https://developer.microsoft.com/ja-jp/windows/holographic/mixed_reality_capture)
--   [*開発者向け複合現実キャプチャ*](https://developer.microsoft.com/ja-jp/windows/holographic/mixed_reality_capture_for_developers)
--   [*ホログラフィック共有エクスペリエンス*](https://developer.microsoft.com/ja-jp/windows/holographic/shared_holographic_experiences)
--   [*ホログラム240*](https://developer.microsoft.com/ja-jp/windows/holographic/holograms_240)
+-   [*複合現実キャプチャ*](https://developer.microsoft.com/ja-jp/windows/mixed-reality/mixed_reality_capture)
+-   [*開発者向け複合現実キャプチャ*](https://developer.microsoft.com/ja-jp/windows/mixed-reality/mixed_reality_capture_for_developers)
+-   [*ホログラフィック共有エクスペリエンス*](https://developer.microsoft.com/ja-jp/windows/mixed-reality/shared_holographic_experiences)
+-   [*ホログラム240*](https://developer.microsoft.com/ja-jp/windows/mixed-reality/holograms_240)
 -   [*GitHub の Spectator Viewコード*](https://github.com/Microsoft/HoloLensCompanionKit/tree/master/SpectatorView)

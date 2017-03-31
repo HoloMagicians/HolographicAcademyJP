@@ -26,17 +26,17 @@ Spectator View のセットアップ
 ## 本書の内容
 
 -   [1 ユースケース](SpectatorView.md#ユースケース)
--   [2 ビデオキャプチャ技法の比較](spectatorview.md#ビデオキャプチャ技法の比較)
--   [3 ハードウェア購入リスト](spectatorview.md#ハードウェア購入リスト)
--   [4 ソフトウェア コンポーネント](spectatorview.md#ソフトウェア-コンポーネント)
--   [5 独自の Spectator Viewカメラの作成](spectatorview.md#独自の-spectator-view-カメラの作成)
-    -   [5.1 装置の組み立て](spectatorview.md#装置の組み立て)
-    -   [5.2 PCのセットアップ](spectatorview.md#PC-のセットアップ)
-    -   [5.3 カメラのセットアップ](spectatorview.md#カメラのセットアップ)
--   [6 キャリブレーション](spectatorview.md#キャリブレーション)
--   [7 コンポジター](spectatorview.md#コンポジター)
--   [8 Unityアプリ](spectatorview.md#unity-アプリ)
--   [9 関連項目](spectatorview.md#関連項目)
+-   [2 ビデオキャプチャ技法の比較](SpectatorView.md#ビデオキャプチャ技法の比較)
+-   [3 ハードウェア購入リスト](SpectatorView.md#ハードウェア購入リスト)
+-   [4 ソフトウェア コンポーネント](SpectatorView.md#ソフトウェア-コンポーネント)
+-   [5 独自の Spectator Viewカメラの作成](SpectatorView.md#独自の-spectator-view-カメラの作成)
+    -   [5.1 装置の組み立て](SpectatorView.md#装置の組み立て)
+    -   [5.2 PCのセットアップ](SpectatorView.md#PC-のセットアップ)
+    -   [5.3 カメラのセットアップ](SpectatorView.md#カメラのセットアップ)
+-   [6 キャリブレーション](SpectatorView.md#キャリブレーション)
+-   [7 コンポジター](SpectatorView.md#コンポジター)
+-   [8 Unityアプリ](SpectatorView.md#unity-アプリ)
+-   [9 関連項目](SpectatorView.md#関連項目)
 
 ## ユースケース
 

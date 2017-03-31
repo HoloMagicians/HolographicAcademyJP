@@ -9,8 +9,7 @@
 <img src="media/image1.png" width="300" height="370">
 サイズ指定が効かない？のでHTML埋め込みでいいかと思います。
  -->
-
-![](media/image1.png){width="3.0625in" height="3.7291666666666665in"}
+<img src="media/image1.png" width="300" height="366">
 
 Spectator View のセットアップ
 
@@ -21,7 +20,7 @@ Spectator View のセットアップ
 3.  第三者の視点でビデオを録画する Spectator View カメラ装置。
 4.  共有エクスペリエンス アプリを実行し、ホログラムを Spectator View ビデオに合成するデスクトップ PC。
 
-![](media/image2.jpeg){width="5.197916666666667in" height="3.46875in"}
+<img src="media/image2.jpeg" width="500" height="333">
 
 ## 本書の内容
 
@@ -31,7 +30,7 @@ Spectator View のセットアップ
 -   [4 ソフトウェア コンポーネント](SpectatorView.md#ソフトウェア-コンポーネント)
 -   [5 独自の Spectator Viewカメラの作成](SpectatorView.md#独自の-spectator-view-カメラの作成)
     -   [5.1 装置の組み立て](SpectatorView.md#装置の組み立て)
-    -   [5.2 PCのセットアップ](SpectatorView.md#pc-のセットアップ)
+    -   [5.2 PC のセットアップ](SpectatorView.md#pc-のセットアップ)
     -   [5.3 カメラのセットアップ](SpectatorView.md#カメラのセットアップ)
 -   [6 キャリブレーション](SpectatorView.md#キャリブレーション)
 -   [7 コンポジター](SpectatorView.md#コンポジター)
@@ -40,14 +39,10 @@ Spectator View のセットアップ
 
 ## ユースケース
 
-![](media/image3.jpeg){width="3.6458333333333335in"
-height="2.0416666666666665in"}
-
+<img src="media/image3.jpeg" width="350" height="197">
 Spectator View での写真のキャプチャ シナリオの例
 
-![](media/image4.gif){width="3.578472222222222in"
-height="2.057638888888889in"}
-
+<img src="media/image4.gif" width="350" height="197">
 Spectator View でのビデオのキャプチャ シナリオの例
 
 このテクノロジが適切に機能する重要なシナリオは 3 つあります。
@@ -69,8 +64,7 @@ Spectator View でのビデオのキャプチャ シナリオの例
 [*複合現実キャプチャ*](https://developer.microsoft.com/ja-jp/windows/holographic/mixed_reality_capture)
 (MRC) は、HoloLens 装着者が一人称視点で目にしているものをコンポジットビデオにします。Spectator View は第三者の視点からビデオを生成するため、ビデオを見る人は、ホログラムと HoloLens デバイスを装着しているユーザーが同時に存在する環境を目にすることができます。また、カメラを選択できるため、MRC 画像に使用される HoloLens 組み込みのカメラに比べて、高解像度、高画質の画像を生成できます。そのため、Spectator View は Windows ストアのアプリ画像、マーケティングビデオ、観客向けのライブ ビューイングの投影などに適しています。
 
-![](media/image5.jpeg){width="3.125in" height="2.8125in"}
-
+<img src="media/image5.jpeg" width="300" height="270">
 Microsoft の基調講演で使用された Spectator View プロフェッショナルカメラ
 
 Microsoft HoloLens が 2015 年 1 月に発表された当初から、Spectator View は、HoloLens
@@ -82,9 +76,7 @@ Microsoft HoloLens が 2015 年 1 月に発表された当初から、Spectator 
 
 ## ハードウェア購入リスト
 
-![](media/image6.jpeg){width="3.6458333333333335in"
-height="2.4166666666666665in"}
-
+<img src="media/image6.jpeg" width="350" height="232">
 Spectator View 装置
 
 <!-- 下記は表になります。原文を参考にしてください。 -->
@@ -138,9 +130,7 @@ Spectator View 装置
 
 ### 装置の組み立て
 
-![](media/image7.gif){width="3.578472222222222in"
-height="3.1618055555555555in"}
-
+<img src="media/image7.gif" width="350" height="303">
 HoloLens と DSLR カメラを使って組み立てた Spectator View 装置。
 
 -   T7 ドライバーを使って、HoloLensからヘッドバンドを取り外します。ネジが緩んだら、クリップを使って反対側から押し出します。
@@ -180,7 +170,7 @@ Spectator View の装置を設定後、カメラから HoloLens までの位置�
 -   このソリューションにはファイル (dependencies.props)があります。このファイルは、サードパーティ製ソースのインクルードファイルの位置情報に関するマクロを作成します。
 -   このファイルを更新して、OpenCV 3.1、Blackmagic SDK、および Canon SDK (該当する場合) をインストールした場所を設定します。
 
-![](media/image8.png){width="6.245138888888889in" height="1.8125in"}
+<img src="media/image8.png" width="600" height="176">
 
 -   フラットな固定面のキャリブレーションパターン (Calibration\\CalibrationPatterns\\2\_66\_grid\_FULL.png)を印刷します。
 -   HoloLens と PC を USB 接続します。
@@ -189,9 +179,8 @@ Spectator View の装置を設定後、カメラから HoloLens までの位置�
 -   キャリブレーション ソリューションを実行します。
 -   添付の動画のように、ビュー全体に格子縞パターンを動かします。
 
-> ![](media/image9.gif){width="3.578472222222222in" height="3.0in"}
->
-> Spectator View 装置のキャリブレーション
+<img src="media/image9.gif" width="350" height="291">
+Spectator View 装置のキャリブレーション
 
 -   格子縞がビュー内に入ると、写真が自動的に撮影されます。次の姿勢に移る前に、HoloLens のバイザーでの白色光を探します。
 -   完了したら、Calibration アプリで **Enter** キーを押して CalibrationData.txt ファイルを作成します。
@@ -232,8 +221,7 @@ Spectator View には、[*共有エクスペリエンス*](https://developer.mic
 -   Sharing、csc.rsp、gmcs.rsp、smcs.rsp など、最新の HoloToolkit をプロジェクトに追加します。
 -   CalibrationData.txt ファイルを、Assets ディレクトリに追加します。
 
-![](media/image10.png){width="4.145833333333333in"
-height="2.5833333333333335in"}
+<img src="media/image10.png" width="400" height="249">
 
 -   HolographicCameraRig\\Prefabs\\SpectatorViewManager をシーンに追加して、以下のようにフィールドを設定します。
     -   \[Holographic Camera Manager\] (ホログラフィックカメラ マネージャー) フィールドには、HolographicCameraRig ディレクトリの HolographicCameraManager を設定します。
@@ -245,23 +233,20 @@ height="2.5833333333333335in"}
     -   オプション: 複数の Spectator View 装置を複数の PC と接続している場合、\[Local Computer IP\] (ローカル
         コンピューターの IP) フィールドに、各 Spectator View 装置が通信する PC の IP を設定します。
 
-![](media/image11.png){width="5.166666666666667in"
-height="2.5208333333333335in"}
+<img src="media/image11.png" width="500" height="246">
 
 -   HoloToolkit SharingService を開始します。
 -   アプリを D3D UWP としてビルドして、Spectator View 装置に取り付けた HoloLens に配置します。
 -   同じのアプリを、共有エクスペリエンスに参加するすべての HoloLens デバイスに配置します。
 -   \[Edit\] (編集)、\[Project settings\] (プロジェクト設定)、\[Player\] (プレイヤー) の順に移動し、\[Run In Background\] (バックグラウンドで実行) チェックボックスをオンにします。
 
-![](media/image12.png){width="4.166666666666667in"
-height="1.2916666666666667in"}
+<img src="media/image12.png" width="400" height="124">
 
 -   \[Spectator View\]、\[Compositor\] (コンポジター) の順に移動し、\[Compositor\] (コンポジター) ウィンドウを起動します。
 
-![](media/image13.png){width="5.1618055555555555in" height="5.78125in"}
+<img src="media/image13.png" width="500" height="560">
 
 -   このウィンドウでは、以下のことが可能です。
-
     -   ビデオの録画を開始する
     -   写真を撮影する
     -   ホログラムの不透明度を変更する
@@ -269,9 +254,6 @@ height="1.2916666666666667in"}
     -   撮影した画像や映像が保存されるディレクトリを開く
     -   Spectator View カメラから空間マッピング データを要求する(SpatialMappingManager がプロジェクトに存在する場合)
     -   シーンの合成ビューや、色、ホログラム、アルファチャンネルなどを個々に表示する
-
-<!-- -->
-
 -   カメラのスイッチをオンにします。
 -   Unity で \[Play\] (プレイ) をクリックします。
 -   カメラが動くと、Unity 内のホログラムが現実世界に現れ、カメラのカラーフィードと相対位置に表示されます。

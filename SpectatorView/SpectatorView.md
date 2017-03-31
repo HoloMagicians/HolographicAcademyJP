@@ -31,7 +31,7 @@ Spectator View のセットアップ
 -   [4 ソフトウェア コンポーネント](SpectatorView.md#ソフトウェア-コンポーネント)
 -   [5 独自の Spectator Viewカメラの作成](SpectatorView.md#独自の-spectator-view-カメラの作成)
     -   [5.1 装置の組み立て](SpectatorView.md#装置の組み立て)
-    -   [5.2 PCのセットアップ](SpectatorView.md#PC-のセットアップ)
+    -   [5.2 PCのセットアップ](SpectatorView.md#pc-のセットアップ)
     -   [5.3 カメラのセットアップ](SpectatorView.md#カメラのセットアップ)
 -   [6 キャリブレーション](SpectatorView.md#キャリブレーション)
 -   [7 コンポジター](SpectatorView.md#コンポジター)

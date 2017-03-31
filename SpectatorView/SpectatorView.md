@@ -1,14 +1,5 @@
-<!--
-原文：https://developer.microsoft.com/en-us/windows/holographic/spectator_view
--->
-
 # Spectator View
 
-<!--
- 画像のサイズがインチで入ってますが、ちょうどいい大きさになればいいと思います。
-<img src="media/image1.png" width="300" height="370">
-サイズ指定が効かない？のでHTML埋め込みでいいかと思います。
- -->
 <img src="media/image1.png" width="300" height="366">
 
 Spectator View のセットアップ
@@ -81,8 +72,6 @@ Microsoft HoloLens が 2015 年 1 月に発表された当初から、Spectator 
 <img src="media/image6.jpeg" width="350" height="232">
 
 Spectator View 装置
-
-<!-- 下記は表になります。原文を参考にしてください。 -->
 
 以下はハードウェアの推奨リストですが、他の互換装置を試してもかまいません。
 

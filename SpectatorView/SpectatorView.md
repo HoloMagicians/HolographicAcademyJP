@@ -40,9 +40,11 @@ Spectator View のセットアップ
 ## ユースケース
 
 <img src="media/image3.jpeg" width="350" height="197">
+
 Spectator View での写真のキャプチャ シナリオの例
 
 <img src="media/image4.gif" width="350" height="197">
+
 Spectator View でのビデオのキャプチャ シナリオの例
 
 このテクノロジが適切に機能する重要なシナリオは 3 つあります。
@@ -77,6 +79,7 @@ Microsoft HoloLens が 2015 年 1 月に発表された当初から、Spectator 
 ## ハードウェア購入リスト
 
 <img src="media/image6.jpeg" width="350" height="232">
+
 Spectator View 装置
 
 <!-- 下記は表になります。原文を参考にしてください。 -->
@@ -131,6 +134,7 @@ Spectator View 装置
 ### 装置の組み立て
 
 <img src="media/image7.gif" width="350" height="303">
+
 HoloLens と DSLR カメラを使って組み立てた Spectator View 装置。
 
 -   T7 ドライバーを使って、HoloLensからヘッドバンドを取り外します。ネジが緩んだら、クリップを使って反対側から押し出します。
@@ -180,6 +184,7 @@ Spectator View の装置を設定後、カメラから HoloLens までの位置�
 -   添付の動画のように、ビュー全体に格子縞パターンを動かします。
 
 <img src="media/image9.gif" width="350" height="291">
+
 Spectator View 装置のキャリブレーション
 
 -   格子縞がビュー内に入ると、写真が自動的に撮影されます。次の姿勢に移る前に、HoloLens のバイザーでの白色光を探します。

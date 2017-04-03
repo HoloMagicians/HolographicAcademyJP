@@ -80,7 +80,7 @@ Spectator View 装置
 |  HoloLens エミュレーターを含み、ホログラフィック開発用に構成した PC。   |      |
 |  HDMI 出力端子または写真キャプチャ SDK を備えたカメラ。  |  写真とビデオのキャプチャについては、[*Canon EOS 5D Mark III*](https://www.amazon.co.jp/dp/B007G3SSP8) カメラが Microsoft によって検証済みです。ライブ デモについては、[*Blackmagic Design の Blackmagic Production Camera4K*](https://www.amazon.co.jp/dp/B00CWLSHYG) が Microsoft によって検証済みです。HDMI 出力端子を備えたカメラ (GoPro など) はすべて機能します。Microsoft が公開しているビデオの多くは [*Canon EF 14mm f/2.8L II USM 超広角単焦点レンズ*](https://www.amazon.co.jp/dp/B000V9F3BG) を使用していますが、ニーズに合ったレンズを選択してください。  |
 |  カメラからカラー フレームを取得して装置のキャリブレーションを行い、合成シーンのプレビューを表示するための PC 用キャプチャ カード。  |  [*Blackmagic Design の Intensity Pro 4K キャプチャ カード*](https://www.amazon.co.jp/dp/B00U3QNP7Q)が Microsoft によって検証済みです。  |
-|  ケーブル  |  カメラをキャプチャ カードに取り付けるための [*HDMI からミニ HDMI への変換ケーブル*](https://www.amazon.co.jp/dp/B014I8UHXE)。使用するカメラに合った HDMI フォーム ファクターを購入します (たとえば、GoPro は[*マイクロ HDMI*](https://www.amazon.co.jp/dp/B014I8U33I) 経由で出力します)。<br>プレビュー用モニターまたはテレビで合成フィードを表示するための [*HDMI ケーブル*](https://www.amazon.co.jp/dp/B014I8TC4E/ref=twister_B016I3XG0S?_encoding=UTF8&th=1)。|
+|  ケーブル  |  カメラをキャプチャ カードに取り付けるための [*HDMI からミニ HDMI への変換ケーブル*](https://www.amazon.co.jp/dp/B014I8UHXE)。使用するカメラに合った HDMI フォーム ファクターを購入します (たとえば、GoPro は[*マイクロ HDMI*](https://www.amazon.co.jp/dp/B014I8U33I) 経由で出力します)。<br>プレビュー用モニターまたはテレビで合成フィードを表示するための [*HDMI ケーブル*](https://www.amazon.co.jp/dp/B014I8TC4E/)。|
 |    HoloLens と カメラをつなぐ、機械加工済みアルミニウム製ブラケット (取り付け金具)。詳細については、OSS プロジェクトの README を参照してください。   |     |
 |    HoloLens のマウント部とカメラのホットシューをつなぐ、3D プリンター製アダプター。詳細については、OSS プロジェクトの README を参照してください。    |     |
 |  ホットシュー アダプターを取り付ける雲台 (ホットシュー ファスナー)。  |  [*雲台*](https://www.amazon.co.jp/dp/B010EIQANS) (訳注：訳者は[こちら](https://www.amazon.co.jp/gp/product/B008604QZQ/)の雲台を使っています。)  |

@@ -11,4 +11,6 @@
  * [ホログラム 220](Academy/holograms_220.md)
  * [ホログラム 230](Academy/holograms_230.md)
  * [ホログラム 240](Academy/holograms_240.md)
- 
+ ### Spectator View
+ * [Spectator View](SpectatorView/SpectatorView.md)(第三者視点カメラ)
+  

@@ -1,6 +1,6 @@
 # ホログラム 240
 
-ホログラムは、空間内をあちこち移動する動きに従って適切な位置を保つようにすることで、仮想世界の中で存在感が与えられます。HoloLensはホログラムを適切な位置に保つため、さまざまな[*座標系*](https://developer.microsoft.com/ja-jp/windows/holographic/coordinate_systems)を使ってオブジェクトの位置や向きを追跡します。このような座標系をデバイス間で共有すると、共通のエクスペリエンスを生み出すことができ、共有されたホログラフィックの世界に参加することができます。
+ホログラムは、空間内をあちこち移動する動きに従って適切な位置を保つようにすることで、仮想世界の中で存在感が与えられます。HoloLensはホログラムを適切な位置に保つため、さまざまな[*座標系*](https://developer.microsoft.com/ja-jp/windows/mixed-reality/coordinate_systems)を使ってオブジェクトの位置や向きを追跡します。このような座標系をデバイス間で共有すると、共通のエクスペリエンスを生み出すことができ、共有されたホログラフィックの世界に参加することができます。
 
 このチュートリアルでは、以下を習得します。
 
@@ -11,8 +11,8 @@
 
 ## 前提条件
 
--   適切な[*ツールをインストール*](https://developer.microsoft.com/ja-jp/windows/holographic/install_the_tools)して構成した、インターネットにアクセスできる Windows 10 PC。
--   [*開発用に構成*](https://developer.microsoft.com/ja-jp/windows/holographic/Using_Visual_Studio.html#enabling_developer_mode)した HoloLens デバイスを 2 基以上。
+-   適切な[*ツールをインストール*](https://developer.microsoft.com/ja-jp/windows/mixed-reality/install_the_tools)して構成した、インターネットにアクセスできる Windows 10 PC。
+-   [*開発用に構成*](https://developer.microsoft.com/ja-jp/windows/mixed-reality/Using_Visual_Studio.html#enabling_developer_mode)した HoloLens デバイスを 2 基以上。
 
 ## プロジェクト ファイル
 
@@ -81,12 +81,12 @@
     -   \[アドレス\] をお使いの HoloLens の名前または IP アドレスに設定します。デバイスの IP アドレスがわからない場合は、\[設定\] 、\[ネットワークとインターネット\] 、\[詳細オプション\] の順にクリックして IP アドレスを確認するか、Cortana に「私の IP アドレスを教えて」と質問します。
     -   \[認証モード\] は \[ユニバーサル\] のままにします。
     -   \[選択\] をクリックします。
--   \[デバッグ\] 、\[デバッグなしで開始\] の順に選ぶか、**Ctrl** キーを押しながら **F5** キーを押します。デバイスに初めて配置する場合は、[*Visual Studioとのペアリング*](https://developer.microsoft.com/ja-jp/windows/holographic/Using_Visual_Studio.html#pairing_your_device)が必要です。
+-   \[デバッグ\] 、\[デバッグなしで開始\] の順に選ぶか、**Ctrl** キーを押しながら **F5** キーを押します。デバイスに初めて配置する場合は、[*Visual Studioとのペアリング*](https://developer.microsoft.com/ja-jp/windows/mixed-reality/Using_Visual_Studio.html#pairing_your_device)が必要です。
 -   HoloLens を着用して、EnergyHub ホログラムを探します。
 
 ## 第 2 章 - 操作
 
-この章では、ホログラムを操作します。まず、[*視線*](https://developer.microsoft.com/ja-jp/windows/holographic/gaze)がわかるようにカーソルを追加します。次に、[*ジェスチャー*](https://developer.microsoft.com/ja-jp/windows/holographic/gestures)を追加し、手を使ってホログラムを空間に置きます。
+この章では、ホログラムを操作します。まず、[*視線*](https://developer.microsoft.com/ja-jp/windows/mixed-reality/gaze)がわかるようにカーソルを追加します。次に、[*ジェスチャー*](https://developer.microsoft.com/ja-jp/windows/mixed-reality/gestures)を追加し、手を使ってホログラムを空間に置きます。
 
 ### 目標
 

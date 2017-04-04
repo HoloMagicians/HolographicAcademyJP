@@ -1,6 +1,6 @@
 # ホログラム 220
 
-[*空間音響*](https://developer.microsoft.com/ja-jp/windows/holographic/spatial_sound)は、ホログラムに生命を吹き込み、仮想世界のホログラムに存在感を与えます。ホログラムは光と音で構成されます。そのため、ホログラムが視界から消えても、空間音響によってホログラムを見つけることができます。空間音響はラジオから聞こえる一般的な音とは違います。空間音響は、3D空間内に位置付けられる音です。空間音響により、ホログラムの音が背後、横、頭上から聞こえるように感じることができます。このチュートリアルでは、以下のことを学びます。
+[*空間音響*](https://developer.microsoft.com/ja-jp/windows/mixed-reality/spatial_sound)は、ホログラムに生命を吹き込み、仮想世界のホログラムに存在感を与えます。ホログラムは光と音で構成されます。そのため、ホログラムが視界から消えても、空間音響によってホログラムを見つけることができます。空間音響はラジオから聞こえる一般的な音とは違います。空間音響は、3D空間内に位置付けられる音です。空間音響により、ホログラムの音が背後、横、頭上から聞こえるように感じることができます。このチュートリアルでは、以下のことを学びます。
 
 -   開発環境を構成して、Microsoft の空間音響を使用する。
 -   空間音響を使って相互作用の質を高める。
@@ -10,10 +10,10 @@
 
 ## 前提条件
 
--   [*適切なツールをインストールして*](https://developer.microsoft.com/ja-jp/windows/holographic/install_the_tools)構成した Windows 10 PC。
+-   [*適切なツールをインストールして*](https://developer.microsoft.com/ja-jp/windows/mixed-reality/install_the_tools)構成した Windows 10 PC。
 -   ある程度基本的な C\# プログラミング能力。
 -   [*ホログラム101*](holograms_101.md) の修了。
--   [*開発用に構成した*](https://developer.microsoft.com/ja-jp/windows/holographic/Using_Visual_Studio.html#enabling_developer_mode) HoloLens デバイス。
+-   [*開発用に構成した*](https://developer.microsoft.com/ja-jp/windows/mixed-reality/Using_Visual_Studio.html#enabling_developer_mode) HoloLens デバイス。
 
 ## プロジェクト ファイル
 
@@ -86,7 +86,7 @@ Unity では空間化プラグインが既定で読み込まれません。以�
 Unity によってスクリプトのコンパイルと Visual Studio ソリューションの作成が開始されます。完了すると、エクスプローラーウィンドウが表示されます。
 -   Visual Studio ウィンドウの上部で、ターゲットを \[Release\] と \[x86\] に変更します。
 -   \[ローカル コンピューター\] の横にある小さな下矢印をクリックして、\[リモート コンピューター\] を選びます。
--   \[アドレス\] ボックスに [*HoloLens の IP アドレス*](https://developer.microsoft.com/ja-jp/windows/holographic/Connecting_to_WiFi.html#identifying_the_hololens_ip_address_on_the_wi-fi_network)を入力し、\[認証モード\] は \[ユニバーサル (暗号化されていないプロトコル)\] をそのまま使います。
+-   \[アドレス\] ボックスに [*HoloLens の IP アドレス*](https://developer.microsoft.com/ja-jp/windows/mixed-reality/Connecting_to_Wi-Fi_on_HoloLens.html#identifying_the_hololens_ip_address_on_the_wi-fi_network)を入力し、\[認証モード\] は \[ユニバーサル (暗号化されていないプロトコル)\] をそのまま使います。
 
 ## 第 2 章 - 空間音響と相互作用
 

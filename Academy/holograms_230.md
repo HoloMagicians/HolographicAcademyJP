@@ -1,6 +1,6 @@
 # ホログラム 230
 
-[*空間マッピング*](https://developer.microsoft.com/ja-jp/windows/holographic/spatial_mapping)はホログラムに環境を教えることで、現実世界と仮想世界とを組み合わせます。ホログラム230 (プロジェクト Planetarium) では、次の方法を習得します。
+[*空間マッピング*](https://developer.microsoft.com/ja-jp/windows/mixed-reality/spatial_mapping)はホログラムに環境を教えることで、現実世界と仮想世界とを組み合わせます。ホログラム230 (プロジェクト Planetarium) では、次の方法を習得します。
 
 -   環境をスキャンして、HoloLens から開発コンピューターにデータを転送する。
 -   シェーダーについて調べ、空間の視覚化にシェーダーを使う。
@@ -10,10 +10,10 @@
 
 ## 前提条件
 
--   適切な[*ツールをインストール*](https://developer.microsoft.com/ja-jp/windows/holographic/install_the_tools)して構成した Windows 10 PC。
+-   適切な[*ツールをインストール*](https://developer.microsoft.com/ja-jp/windows/mixed-reality/install_the_tools)して構成した Windows 10 PC。
 -   ある程度基本的な C\# プログラミング能力。
 -   [*ホログラム101*](holograms_101.md) の修了。
--   [*開発用に構成*](https://developer.microsoft.com/ja-jp/windows/holographic/Using_Visual_Studio.html#enabling_developer_mode)した HoloLens デバイス。
+-   [*開発用に構成*](https://developer.microsoft.com/ja-jp/windows/mixed-reality/Using_Visual_Studio.html#enabling_developer_mode)した HoloLens デバイス。
 
 ## プロジェクト ファイル
 
@@ -103,7 +103,7 @@
 -   Visual Studio 上部のツールバーを使って、構成を \[Release\] に変更します。
 -   プラットフォームを \[x86\] に変更します。
 -   \[ローカル コンピューター\] の横にある矢印をクリックして、\[リモートコンピューター\] を選びます。
--   \[アドレス\] フィールドに[*デバイスの IP アドレス*](https://developer.microsoft.com/ja-jp/windows/holographic/Connecting_to_WiFi.html#identifying_the_hololens_ip_address_on_the_wi-fi_network)を入力し、\[認証モード\] を \[ユニバーサル (暗号化されていないプロトコル)\] に変更します。
+-   \[アドレス\] フィールドに[*デバイスの IP アドレス*](https://developer.microsoft.com/ja-jp/windows/mixed-reality/Connecting_to_Wi-Fi_on_HoloLens.html#identifying_the_hololens_ip_address_on_the_wi-fi_network)を入力し、\[認証モード\] を \[ユニバーサル (暗号化されていないプロトコル)\] に変更します。
 -   \[デバッグ\] 、\[デバッグなしで開始\] の順に選ぶか、**Ctrl** キーを押しながら **F5** キーを押します。
 -   Visual Studio の \[出力\] パネルで、ビルドと配置のようすを見守ります。
 -   アプリの配置が完了したら、室内を歩き回ります。カメラを取り巻く面が黒と白のワイヤーフレームのメッシュに覆われます。

@@ -1,6 +1,6 @@
 # ホログラム 211
 
-[*ジェスチャー*](https://developer.microsoft.com/ja-jp/windows/holographic/gestures)は、ユーザーの意図を動きで表します。ユーザーはジェスチャーを使ってホログラムを操作できます。このチュートリアルでは、ユーザーの手の動きを追跡し、ユーザー入力に反応して、手の状態と位置に応じてユーザーにフィードバックを提供する方法について説明します。
+[*ジェスチャー*](https://developer.microsoft.com/ja-jp/windows/mixed-reality/gestures)は、ユーザーの意図を動きで表します。ユーザーはジェスチャーを使ってホログラムを操作できます。このチュートリアルでは、ユーザーの手の動きを追跡し、ユーザー入力に反応して、手の状態と位置に応じてユーザーにフィードバックを提供する方法について説明します。
 
 [*ホログラム 101*](holograms_101.md) では、簡単に空中をタップするジェスチャーを使ってホログラムを操作しました。今回は、空中をタップするよりも複雑なジェスチャーを取り上げ、以下を行うために新しい考え方を示します。
 
@@ -13,11 +13,11 @@
 
 ## 前提条件
 
--   適切な[*ツールをインストールして*](https://developer.microsoft.com/ja-jp/windows/holographic/install_the_tools)構成した Windows 10 PC。
+-   適切な[*ツールをインストールして*](https://developer.microsoft.com/ja-jp/windows/mixed-reality/install_the_tools)構成した Windows 10 PC。
 -   ある程度基本的な C\# プログラミング能力。
 -   [*ホログラム 101*](holograms_101.md) の修了。
 -   [*ホログラム 210*](holograms_210.md) の修了。
--   [*開発用に構成した*](https://developer.microsoft.com/ja-jp/windows/holographic/Using_Visual_Studio.html#enabling_developer_mode) HoloLens デバイス。
+-   [*開発用に構成した*](https://developer.microsoft.com/ja-jp/windows/mixed-reality/Using_Visual_Studio.html#enabling_developer_mode) HoloLens デバイス。
 
 ## プロジェクト ファイル
 
@@ -65,7 +65,7 @@
 -   上部にあるボックスの一覧で、\[Debug\] を \[Release\]に、\[ARM\] を \[x86\] に変更します。
 -   \[ローカル コンピューター\] の横にある矢印をクリックし、\[リモート コンピューター\] を選びます。
 -   デバイスの IP アドレスを入力して、\[認証モード\] を \[ユニバーサル (暗号化されていないプロトコル)\] に設定します。\[選択\] をクリックします。HoloLens デバイスの IP アドレスがわからない場合は、\[設定\]、\[ネットワークとインターネット\]、\[詳細オプション\] の順にクリックして IP アドレスを確認するか、Cortana に「Hey Cortana, what's my IP address?」と質問します。
--   メニューで \[デバッグ\]、\[デバッグなしで開始\] の順に選ぶか、**Ctrl** キーを押しながら **F5** キーを押します。デバイスに初めて配置する場合は、Visual Studio とのペアリングが必要です。「[*HoloLens と Visual Studio のペアリング*](https://developer.microsoft.com/ja-jp/windows/holographic/Using_Visual_Studio.html#pairing_your_device)」の指示に従います。
+-   メニューで \[デバッグ\]、\[デバッグなしで開始\] の順に選ぶか、**Ctrl** キーを押しながら **F5** キーを押します。デバイスに初めて配置する場合は、Visual Studio とのペアリングが必要です。「[*HoloLens と Visual Studio のペアリング*](https://developer.microsoft.com/ja-jp/windows/mixed-reality/Using_Visual_Studio.html#pairing_your_device)」の指示に従います。
 -   **メモ:** Visual Studio の \[エラー\] パネルに、赤でエラーがいくつか表示されることがあります。これらのエラーは無視しても問題は生じません。\[出力\] パネルに切り替えて、実際のビルドの進捗状況を表示します。\[出力\] パネルにエラーが表示される場合は解決する必要があります (エラーの原因はほぼスクリプト内でのミスによるものです)。
 
 ## 第 1 章 - 手の検出とフィードバック
@@ -327,9 +327,9 @@ namespace Academy.HoloToolkit.Unity
             NavigationRecognizer.NavigationStartedEvent += NavigationRecognizer_NavigationStartedEvent;
             // 2.b: Register for the NavigationUpdatedEvent with the NavigationRecognizer_NavigationUpdatedEvent function.
             NavigationRecognizer.NavigationUpdatedEvent += NavigationRecognizer_NavigationUpdatedEvent;
-            // 2.b: Register for the NavigationCompletedEvent with the NavigationRecognizer_NavigationCompletedEvent function. 
+            // 2.b: Register for the NavigationCompletedEvent with the NavigationRecognizer_NavigationCompletedEvent function.
             NavigationRecognizer.NavigationCompletedEvent += NavigationRecognizer_NavigationCompletedEvent;
-            // 2.b: Register for the NavigationCanceledEvent with the NavigationRecognizer_NavigationCanceledEvent function. 
+            // 2.b: Register for the NavigationCanceledEvent with the NavigationRecognizer_NavigationCanceledEvent function.
             NavigationRecognizer.NavigationCanceledEvent += NavigationRecognizer_NavigationCanceledEvent;
 
             // Instantiate the ManipulationRecognizer.
@@ -485,7 +485,7 @@ namespace Academy.HoloToolkit.Unity
 
 スクリプトでこのコーディングを完成させるか、コードを以下の完成版のソリューションに置き換えます。
 
-GestureAction.cs 
+GestureAction.cs
 
 ```cs
 using Academy.HoloToolkit.Unity;
@@ -615,7 +615,7 @@ GestureManager.cs と AstronautManager.cs
 
 GestureAction.cs でのコメントを参考にコーディングを完成するか、以下の完成版ソリューションを使用します。
 
-GestureAction.cs 
+GestureAction.cs
 
 ```cs
 using Academy.HoloToolkit.Unity;
@@ -668,10 +668,10 @@ public class GestureAction : MonoBehaviour
             /* TODO: DEVELOPER CODING EXERCISE 4.a */
 
             Vector3 moveVector = Vector3.zero;
-            
+
             // 4.a: Calculate the moveVector as position - manipulationPreviousPosition.
             moveVector = position - manipulationPreviousPosition;
-            
+
             // 4.a: Update the manipulationPreviousPosition with the current position.
             manipulationPreviousPosition = position;
 
@@ -710,7 +710,7 @@ public class GestureAction : MonoBehaviour
 
 AstronautManager.cs でコメントを参考にコーディングを完成するか、以下の完成版のコードをコピーして貼り付けます。
 
-AstronautManager.cs 
+AstronautManager.cs
 
 ```cs
 using Academy.HoloToolkit.Unity;
@@ -845,5 +845,3 @@ public class AstronautManager : Singleton<AstronautManager>
 -   手の追跡、ナビゲーション、操縦のイベントを検出して反応する方法を学びました。
 -   ナビゲーションのジェスチャーと操縦のジェスチャーの違いを学びました。
 -   手を検出したとき、手が画面から外れそうなとき、オブジェクトが異なる操作 (ナビゲーションと操縦) をサポートしているときにカーソルを変更して、ビジュアル フィードバックを提供する方法を学びました。
-
-

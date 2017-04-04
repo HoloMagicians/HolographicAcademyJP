@@ -263,8 +263,7 @@ Visual Studio
 1.  \[ローカル コンピューター\] の横にある矢印をクリックし、配置先を
     \[リモート コンピューター\] に変更します。
 
-2.  [*HoloLens デバイスの IP
-    アドレス*](https://developer.microsoft.com/ja-jp/windows/mixed-reality/Connecting_to_WiFi.html#identifying_the_hololens_ip_address_on_the_wi-fi_network)を入力し、\[認証モード\]
+2.  \[HoloLens デバイスの IP アドレス\] を入力し、\[認証モード\]
     を \[ユニバーサル (暗号化されていないプロトコル)\] に変更します。
 
 3.  \[デバッグ\]、\[デバッグなしで開始\]

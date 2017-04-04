@@ -86,7 +86,7 @@ Unity では空間化プラグインが既定で読み込まれません。以�
 Unity によってスクリプトのコンパイルと Visual Studio ソリューションの作成が開始されます。完了すると、エクスプローラーウィンドウが表示されます。
 -   Visual Studio ウィンドウの上部で、ターゲットを \[Release\] と \[x86\] に変更します。
 -   \[ローカル コンピューター\] の横にある小さな下矢印をクリックして、\[リモート コンピューター\] を選びます。
--   \[アドレス\] ボックスに [*HoloLens の IP アドレス*](https://developer.microsoft.com/ja-jp/windows/mixed-reality/Connecting_to_WiFi.html#identifying_the_hololens_ip_address_on_the_wi-fi_network)を入力し、\[認証モード\] は \[ユニバーサル (暗号化されていないプロトコル)\] をそのまま使います。
+-   \[アドレス\] ボックスに [*HoloLens の IP アドレス*](https://developer.microsoft.com/ja-jp/windows/mixed-reality/Connecting_to_Wi-Fi_on_HoloLens.html#identifying_the_hololens_ip_address_on_the_wi-fi_network)を入力し、\[認証モード\] は \[ユニバーサル (暗号化されていないプロトコル)\] をそのまま使います。
 
 ## 第 2 章 - 空間音響と相互作用
 

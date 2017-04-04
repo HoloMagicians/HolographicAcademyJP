@@ -103,7 +103,7 @@
 -   Visual Studio 上部のツールバーを使って、構成を \[Release\] に変更します。
 -   プラットフォームを \[x86\] に変更します。
 -   \[ローカル コンピューター\] の横にある矢印をクリックして、\[リモートコンピューター\] を選びます。
--   \[アドレス\] フィールドに[*デバイスの IP アドレス*](https://developer.microsoft.com/ja-jp/windows/mixed-reality/Connecting_to_WiFi.html#identifying_the_hololens_ip_address_on_the_wi-fi_network)を入力し、\[認証モード\] を \[ユニバーサル (暗号化されていないプロトコル)\] に変更します。
+-   \[アドレス\] フィールドに[*デバイスの IP アドレス*](https://developer.microsoft.com/ja-jp/windows/mixed-reality/Connecting_to_Wi-Fi_on_HoloLens.html#identifying_the_hololens_ip_address_on_the_wi-fi_network)を入力し、\[認証モード\] を \[ユニバーサル (暗号化されていないプロトコル)\] に変更します。
 -   \[デバッグ\] 、\[デバッグなしで開始\] の順に選ぶか、**Ctrl** キーを押しながら **F5** キーを押します。
 -   Visual Studio の \[出力\] パネルで、ビルドと配置のようすを見守ります。
 -   アプリの配置が完了したら、室内を歩き回ります。カメラを取り巻く面が黒と白のワイヤーフレームのメッシュに覆われます。

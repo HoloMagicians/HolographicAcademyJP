@@ -6,7 +6,7 @@
 
 ## 前提条件
 
--   [*適切なツールをインストール*](https://developer.microsoft.com/ja-jp/windows/holographic/install_the_tools)して構成した
+-   [*適切なツールをインストール*](https://developer.microsoft.com/ja-jp/windows/mixed-reality/install_the_tools)して構成した
     Windows 10 PC。
 
 ## チュートリアルの内容
@@ -100,7 +100,7 @@ HoloLens と一緒に使うには、メイン カメラにいくつか変更を�
 
 最後に、ユーザーとホログラムの距離が近づいたときに、ユーザーの目の近くにホログラムがレンダリングされないように、クリッピング平面の近い方の距離を
 [*HoloLens
-推奨*](https://developer.microsoft.com/ja-jp/windows/holographic/Camera_in_Unity.html#clip_planes)の
+推奨*](https://developer.microsoft.com/ja-jp/windows/mixed-reality/Camera_in_Unity.html#clip_planes)の
 0.85 メートルに設定します。
 
 1.  \[Hierarchy\] (階層) パネルで \[Main Camera\] (メイン カメラ)
@@ -150,7 +150,7 @@ Unity の画質設定
 
 HoloLens
 ではフレームレートを高く保つことが非常に重要です。そこで、最高のパフォーマンスを得るため、画質の設定を調整します。詳しいパフォーマンス情報については、「[*Unity
-のパフォーマスに関する推奨事項*](https://developer.microsoft.com/ja-jp/windows/holographic/performance_recommendations_for_unity)」をご覧ください。
+のパフォーマスに関する推奨事項*](https://developer.microsoft.com/ja-jp/windows/mixed-reality/performance_recommendations_for_unity)」をご覧ください。
 
 1.  \[Edit\] (編集)、\[Project Settings\]
     (プロジェクトの設定)、\[Quality\] (画質) の順に選びます。
@@ -264,12 +264,12 @@ Visual Studio
     \[リモート コンピューター\] に変更します。
 
 2.  [*HoloLens デバイスの IP
-    アドレス*](https://developer.microsoft.com/ja-jp/windows/holographic/Connecting_to_WiFi.html#identifying_the_hololens_ip_address_on_the_wi-fi_network)を入力し、\[認証モード\]
+    アドレス*](https://developer.microsoft.com/ja-jp/windows/mixed-reality/Connecting_to_WiFi.html#identifying_the_hololens_ip_address_on_the_wi-fi_network)を入力し、\[認証モード\]
     を \[ユニバーサル (暗号化されていないプロトコル)\] に変更します。
 
 3.  \[デバッグ\]、\[デバッグなしで開始\]
     の順に選びます。デバイスに初めて配置する場合は、[*Visual Studio
-    とのペアリング*](https://developer.microsoft.com/ja-jp/windows/holographic/Using_Visual_Studio.html#pairing_your_device)が必要です。
+    とのペアリング*](https://developer.microsoft.com/ja-jp/windows/mixed-reality/Using_Visual_Studio.html#pairing_your_device)が必要です。
 
 ### USB 接続の HoloLens
 
@@ -291,9 +291,7 @@ Visual Studio
 
 ## 関連項目
 
--   [*Unity 開発の概要*](https://developer.microsoft.com/ja-jp/windows/holographic/unity_development_overview)
--   [*Unity と Visual Studio による作業のベスト プラクティス*](https://developer.microsoft.com/ja-jp/windows/holographic/best_practices_for_working_with_unity_and_visual_studio)
+-   [*Unity 開発の概要*](https://developer.microsoft.com/ja-jp/windows/mixed-reality/unity_development_overview)
+-   [*Unity と Visual Studio による作業のベスト プラクティス*](https://developer.microsoft.com/ja-jp/windows/mixed-reality/best_practices_for_working_with_unity_and_visual_studio)
 -   [*ホログラム 101*](holograms_101.md)
 -   [*ホログラム 101E*](holograms_101e.md)
-
-

@@ -1,6 +1,6 @@
 # ホログラム 210 
 
-[*視線*](https://developer.microsoft.com/ja-jp/windows/holographic/gaze)は最初の入力形式で、ユーザーの意図や認知を明らかにします。ホログラム 210 （別名、プロジェクト エクスプローラー) は、Windows Holographic の視線関連の考え方に深く関わっています。ここでは、これまでのカーソルとホログラムに状況認知を加え、ユーザーの視線をアプリが認識し、これを利用するようにします。
+[*視線*](https://developer.microsoft.com/ja-jp/windows/mixed-reality/gaze)は最初の入力形式で、ユーザーの意図や認知を明らかにします。ホログラム 210 （別名、プロジェクト エクスプローラー) は、Windows Holographic の視線関連の考え方に深く関わっています。ここでは、これまでのカーソルとホログラムに状況認知を加え、ユーザーの視線をアプリが認識し、これを利用するようにします。
 
 ここでは気さくな宇宙飛行士を使って視線の考え方を学びます。[ホログラム 101](holograms_101.md) では、視線に追従するだけのシンプルなカーソルを導入しました。今度は、このカーソルを以下のように少し高度にします。
 
@@ -12,10 +12,10 @@
 
 ## 前提条件
 
--   適切な[*ツールをインストールして*](https://developer.microsoft.com/ja-jp/windows/holographic/install_the_tools)構成した Windows 10 PC。
+-   適切な[*ツールをインストールして*](https://developer.microsoft.com/ja-jp/windows/mixed-reality/install_the_tools)構成した Windows 10 PC。
 -   ある程度基本的な C\# プログラミング能力。
--   [*ホログラム 101*](https://developer.microsoft.com/ja-jp/windows/holographic/holograms_101) の修了。
--   [*開発用に構成した*](https://developer.microsoft.com/ja-jp/windows/holographic/Using_Visual_Studio.html#enabling_developer_mode) HoloLens デバイス。
+-   [*ホログラム 101*](https://developer.microsoft.com/ja-jp/windows/mixed-reality/holograms_101) の修了。
+-   [*開発用に構成した*](https://developer.microsoft.com/ja-jp/windows/mixed-reality/Using_Visual_Studio.html#enabling_developer_mode) HoloLens デバイス。
 
 ## プロジェクト ファイル
 
@@ -118,7 +118,7 @@
 -   Visual Studio 上部のツール バーを使って、ターゲットを \[Debug\] から \[Release\]、\[ARM\] から \[X86\] に変更します。
 -   \[デバイス\] ボタンの横にある矢印をクリックして、\[リモート コンピューター\] を選びます。
 -   デバイスの IP アドレスを入力し、\[認証モード\] を \[ユニバーサル (暗号化されていないプロトコル)\] に設定します。\[選択\] をクリックします。デバイスの IP アドレスがわからない場合は、\[設定\]、\[ネットワークとインターネット\]、\[詳細オプション\] の順に選んで、確認します。
--   上部のメニュー バーで \[デバッグ\]、\[デバッグなしで開始\] の順に選ぶか、**Ctrl** キーを押しながら **F5** キーを押します。デバイスに初めて配置する場合は、[*Visual Studio とのペアリング*](https://developer.microsoft.com/ja-jp/windows/holographic/Using_Visual_Studio.html#pairing_your_device)が必要です。
+-   上部のメニュー バーで \[デバッグ\]、\[デバッグなしで開始\] の順に選ぶか、**Ctrl** キーを押しながら **F5** キーを押します。デバイスに初めて配置する場合は、[*Visual Studio とのペアリング*](https://developer.microsoft.com/ja-jp/windows/mixed-reality/Using_Visual_Studio.html#pairing_your_device)が必要です。
 -   アプリを配置したら、「選ぶ」ジェスチャーを使って Fitbox を消します。
 
 ## 第 2 章 - カーソルとターゲットのフィードバック
@@ -162,7 +162,7 @@
 
 GazeManager.cs で "Coding Exercise" というコメントを探し、自身でコードを記述してもかまいません。コメントはそれぞれ 1 行のコードに対応します。以下の完成版を使用してもかまいません。
 
-GazeManager.cs 
+GazeManager.cs
 ```cs
 using UnityEngine;
 
@@ -252,7 +252,7 @@ namespace Academy.HoloToolkit.Unity
                            MaxGazeDistance,
                            RaycastLayerMask);
 
-            // 2.a: Assign hitInfo variable to the HitInfo public property 
+            // 2.a: Assign hitInfo variable to the HitInfo public property
             // so other classes can access it.
             HitInfo = hitInfo;
 
@@ -376,7 +376,7 @@ InteractibleManager.cs と Interactible.cs の両方を編集して、以下の�
 
 InteractibleManager.cs と Interactible.cs で "Coding Exercise" というコメントを探して、自身でコードを記述し、試してみることができます。または、以下のソリューションを使用してもかまいません。
 
-InteractibleManager.cs 
+InteractibleManager.cs
 ```cs
 using Academy.HoloToolkit.Unity;
 using UnityEngine;
@@ -449,7 +449,7 @@ public class InteractibleManager : Singleton<InteractibleManager>
 }
 ```
 
-Interactible.cs 
+Interactible.cs
 
 ```cs
 using UnityEngine;
@@ -559,7 +559,7 @@ public class Interactible : MonoBehaviour
 1.  Visual Studio で GazeManager スクリプトを開きます。
 2.  以下のコードを GazeManager.cs にコピーするか、"Coding Excercise 3.a" を自身で完成します。
 
-GazeManager.cs 
+GazeManager.cs
 ```cs
 using UnityEngine;
 
@@ -649,7 +649,7 @@ namespace Academy.HoloToolkit.Unity
                            MaxGazeDistance,
                            RaycastLayerMask);
 
-            // 2.a: Assign hitInfo variable to the HitInfo public property 
+            // 2.a: Assign hitInfo variable to the HitInfo public property
             // so other classes can access it.
             HitInfo = hitInfo;
 
@@ -754,7 +754,7 @@ namespace Academy.HoloToolkit.Unity
 -   最初に、InteractibleAction にメッセージを送信するように Interactible.cs スクリプトを変更する必要があります。
 -   "Coding Excercise" を完成するか、以下を使用して Interactible.cs を編集します。
 
-Interactible.cs 
+Interactible.cs
 ```cs
 using UnityEngine;
 
@@ -840,7 +840,7 @@ public class Interactible : MonoBehaviour
         SendMessage(&quot;PerformTagAlong&quot;);
     }
 }
-``` 
+```
 
 視線をホログラムに向けると、InteractibleAction.cs スクリプトはカスタム アクションを実行します。では、追従を使用するために更新してみましょう。
 
@@ -861,7 +861,7 @@ public class Interactible : MonoBehaviour
 
 ソリューションは次のようになります。
 
-InteractibleAction.cs 
+InteractibleAction.cs
 
 ```cs
 using Academy.HoloToolkit.Unity;
@@ -910,5 +910,3 @@ public class InteractibleAction : MonoBehaviour
 
 -   試してみます。アプリをビルドして HoloLens に配置します。
 -   コンテンツが、連続的ではなく、邪魔になることもなく、視線の中心に追従するようすを観察します。
-
-

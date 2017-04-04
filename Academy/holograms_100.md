@@ -99,8 +99,7 @@ HoloLens と一緒に使うには、メイン カメラにいくつか変更を�
     0, 0) に変更します。
 
 最後に、ユーザーとホログラムの距離が近づいたときに、ユーザーの目の近くにホログラムがレンダリングされないように、クリッピング平面の近い方の距離を
-[*HoloLens
-推奨*](https://developer.microsoft.com/ja-jp/windows/mixed-reality/Camera_in_Unity.html#clip_planes)の
+[*HoloLens 推奨*](https://developer.microsoft.com/ja-jp/windows/mixed-reality/Camera_in_Unity.html#clip_planes)の
 0.85 メートルに設定します。
 
 1.  \[Hierarchy\] (階層) パネルで \[Main Camera\] (メイン カメラ)
@@ -149,8 +148,7 @@ Studio、そして HoloLens にエクスポートします。
 Unity の画質設定
 
 HoloLens
-ではフレームレートを高く保つことが非常に重要です。そこで、最高のパフォーマンスを得るため、画質の設定を調整します。詳しいパフォーマンス情報については、「[*Unity
-のパフォーマスに関する推奨事項*](https://developer.microsoft.com/ja-jp/windows/mixed-reality/performance_recommendations_for_unity)」をご覧ください。
+ではフレームレートを高く保つことが非常に重要です。そこで、最高のパフォーマンスを得るため、画質の設定を調整します。詳しいパフォーマンス情報については、「[*Unity のパフォーマスに関する推奨事項*](https://developer.microsoft.com/ja-jp/windows/mixed-reality/performance_recommendations_for_unity)」をご覧ください。
 
 1.  \[Edit\] (編集)、\[Project Settings\]
     (プロジェクトの設定)、\[Quality\] (画質) の順に選びます。
@@ -267,15 +265,14 @@ Visual Studio
     を \[ユニバーサル (暗号化されていないプロトコル)\] に変更します。
 
 3.  \[デバッグ\]、\[デバッグなしで開始\]
-    の順に選びます。デバイスに初めて配置する場合は、[*Visual Studio
-    とのペアリング*](https://developer.microsoft.com/ja-jp/windows/mixed-reality/Using_Visual_Studio.html#pairing_your_device)が必要です。
+    の順に選びます。デバイスに初めて配置する場合は、[*Visual Studio とのペアリング*](https://developer.microsoft.com/ja-jp/windows/mixed-reality/Using_Visual_Studio.html#pairing_your_device)が必要です。
 
 ### USB 接続の HoloLens
 
 1.  \[ローカル コンピューター\] の横にある矢印をクリックし、配置先を
     \[デバイス\] に変更します。
 
-2.  \[デバッグ\]、\[デバッグなしで開始\] の順に選びます。
+2.  \[デバッグ\]、\[デバッグなしで開始\] の順に選びます。  
 
 ### エミュレーター
 

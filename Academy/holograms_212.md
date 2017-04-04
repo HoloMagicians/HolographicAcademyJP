@@ -1,6 +1,6 @@
 # ホログラム 212
 
-[*音声入力*](https://developer.microsoft.com/ja-jp/windows/holographic/voice_input)もホログラムを操作する 1 つの方法です。音声コマンドは、非常に自然かつ簡単に機能します。このチュートリアルでは、以下を目標に音声コマンドを設計します。
+[*音声入力*](https://developer.microsoft.com/ja-jp/windows/mixed-reality/voice_input)もホログラムを操作する 1 つの方法です。音声コマンドは、非常に自然かつ簡単に機能します。このチュートリアルでは、以下を目標に音声コマンドを設計します。
 
 -   自然
 -   覚えやすい
@@ -19,12 +19,12 @@
 
 ## 前提条件
 
--   適切な[*ツールをインストールして*](https://developer.microsoft.com/ja-jp/windows/holographic/install_the_tools)構成した Windows 10 PC。
+-   適切な[*ツールをインストールして*](https://developer.microsoft.com/ja-jp/windows/mixed-reality/install_the_tools)構成した Windows 10 PC。
 -   ある程度基本的な C\# プログラミング能力。
 -   [*ホログラム 101*](holograms_101.md) の修了。
 -   [*ホログラム 210*](holograms_210.md) の修了。
 -   [*ホログラム 211*](holograms_211.md) の修了。
--   [*開発用に構成した*](https://developer.microsoft.com/ja-jp/windows/holographic/Using_Visual_Studio.html#enabling_developer_mode) HoloLens デバイス。
+-   [*開発用に構成した*](https://developer.microsoft.com/ja-jp/windows/mixed-reality/Using_Visual_Studio.html#enabling_developer_mode) HoloLens デバイス。
 
 **プロジェクト ファイル**
 
@@ -71,7 +71,7 @@
 -   Visual Studio 上部のツール バーを使って、ターゲットを \[Debug\] から \[Release\]、\[ARM\] から \[X86\] に変更します。
 -   \[デバイス\] ボタンの横にある矢印をクリックして、\[リモート コンピューター\] を選びます。
 -   デバイスの IP アドレスを入力して、\[認証モード\] を \[ユニバーサル (暗号化されていないプロトコル)\] に設定します。\[選択\] をクリックします。デバイスの IP アドレスがわからない場合は、\[設定\]、\[ネットワークとインターネット\]、\[詳細オプション\] の順にクリックして IP アドレスを確認するか、Cortana に「Hey Cortana, what's my IP address?」と質問します。
--   メニューで \[デバッグ\]、\[デバッグなしで開始\] の順に選ぶか、**Ctrl** キーを押しながら **F5** キーを押します。デバイスに初めて配置する場合は、Visual Studio とのペアリングが必要です。以下の「[*HoloLens と Visual Studio のペアリング*](https://developer.microsoft.com/ja-jp/windows/holographic/Using_Visual_Studio.html#pairing_your_device)」の指示に従います。
+-   メニューで \[デバッグ\]、\[デバッグなしで開始\] の順に選ぶか、**Ctrl** キーを押しながら **F5** キーを押します。デバイスに初めて配置する場合は、Visual Studio とのペアリングが必要です。以下の「[*HoloLens と Visual Studio のペアリング*](https://developer.microsoft.com/ja-jp/windows/mixed-reality/Using_Visual_Studio.html#pairing_your_device)」の指示に従います。
 -   **メモ:** Visual Studio の \[エラー\] パネルに、赤でエラーがいくつか表示されることがあります。これらのエラーは無視しても問題は生じません。\[出力\] パネルに切り替えて、実際のビルドの進捗状況を表示します。\[出力\] パネルにエラーが表示される場合は解決する必要があります (エラーの原因はほぼスクリプト内でのミスによるものです)。
 
 ## 第 1 章 – 認知
@@ -99,8 +99,8 @@
     2.  Scroll Tool
     3.  Zoom Tool
     4.  Drag Tool
-    5.  Adjust 
-    6.  Remove 
+    5.  Adjust
+    6.  Remove
 
 -   同じ音は使用しません。韻を踏む音声コマンドは使用しないようにします。ショッピング アプリで音声コマンドとして「Show Store」 と「Show More」 をサポートする場合は、一方のコマンドの使用中はもう一方のコマンドを無効にすることを考えます。たとえば、「Show Store」 でストアを開き、ストアが表示されたらこれを無効にして、「Show More」 を有効にして表示件数を増やせるようにします。
 
@@ -122,7 +122,7 @@
 (セットアップ中にこのプロジェクトを Visual Studio で既にビルドして配置した場合は、VS のインスタンスを開いて、メッセージが表示されたときに \[再読み込み\] をクリックします)
 
 -   Visual Studio で 、\[デバッグ\]、\[デバッグなしで開始\] の順に選ぶか、**Ctrl** キーを押しながら **F5** キーを押します。
--   アプリを HoloLens に配置したら、[*空中をタップする*](https://developer.microsoft.com/ja-jp/windows/holographic/Gestures.html#press_and_release)ジェスチャーを使って Fitbox を消去します。
+-   アプリを HoloLens に配置したら、[*空中をタップする*](https://developer.microsoft.com/ja-jp/windows/mixed-reality/Gestures.html#press_and_release)ジェスチャーを使って Fitbox を消去します。
 -   宇宙飛行士の腕時計に視線を送ります。
 -   腕時計にフォーカスが設定されると、カーソルがマイクに変わることを確認します。これにより、アプリが音声コマンドをリッスンしていることを示すフィードバックが提供されます。
 -   腕時計にツールチップが表示されることを確認します。これにより、ユーザーは「Open Communicator」 コマンドを認知できます。
@@ -158,7 +158,7 @@ Communicator.cs には、コミュニケーター デバイスのボタンの状
 
 -   Communicator.cs の Start メソッドから以下の行を削除します。これで、コミュニケーターの \[Record\] ボタンが有効になります。
 
-Communicator.cs 
+Communicator.cs
 ```cs
 // TODO: 2.a Delete the following two lines:
 RecordButton.SetActive(false);
@@ -214,7 +214,7 @@ MessageUIRenderer.gameObject.SetActive(false);
 
 -   MicrophoneManager.cs で「3.a」で示した部分のコーディングをすべて完成するか、以下の完成版コードをコピーして貼り付けます。
 
-MicrophoneManager.cs 
+MicrophoneManager.cs
 ```cs
 using Academy.HoloToolkit.Unity;
 using System.Collections;
@@ -233,7 +233,7 @@ public class MicrophoneManager : MonoBehaviour
     // Use this string to cache the text currently displayed in the text box.
     private StringBuilder textSoFar;
 
-    // Using an empty string specifies the default microphone. 
+    // Using an empty string specifies the default microphone.
     private static string deviceName = string.Empty;
     private int samplingRate;
     private const int messageLength = 10;
@@ -452,4 +452,3 @@ public class MicrophoneManager : MonoBehaviour
 -   ユーザーの音声を聞き取ったという確認応答に使用するフィードバックを数種類学びました。
 -   Keyword Recognizer と Dictation Recognizer を切り替える方法と、この 2 つの機能が音声を理解および解釈するしくみを学びました。
 -   SRGS ファイルと Grammar Recognizer を使って、アプリで音声認識を使用する方法を学びました。
-

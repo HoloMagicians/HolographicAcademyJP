@@ -1,10 +1,10 @@
 # ホログラム 101E
 
-このチュートリアルでは、Unity を使ってビルドするプロジェクト全体について順を追って説明します。このプロジェクトでは、[*視線*](https://developer.microsoft.com/ja-jp/windows/holographic/gaze)、[*ジェスチャー*](https://developer.microsoft.com/ja-jp/windows/holographic/gestures)、[*音声入力*](https://developer.microsoft.com/ja-jp/windows/holographic/voice_input)、[*空間音響*](https://developer.microsoft.com/ja-jp/windows/holographic/spatial_sound)、[*空間マッピング*](https://developer.microsoft.com/ja-jp/windows/holographic/spatial_mapping)など、Windows Holographic Platform と HoloLensの核となる機能を示します。このチュートリアルの所要時間は約 1 時間です。
+このチュートリアルでは、Unity を使ってビルドするプロジェクト全体について順を追って説明します。このプロジェクトでは、[*視線*](https://developer.microsoft.com/ja-jp/windows/mixed-reality/gaze)、[*ジェスチャー*](https://developer.microsoft.com/ja-jp/windows/mixed-reality/gestures)、[*音声入力*](https://developer.microsoft.com/ja-jp/windows/mixed-reality/voice_input)、[*空間音響*](https://developer.microsoft.com/ja-jp/windows/mixed-reality/spatial_sound)、[*空間マッピング*](https://developer.microsoft.com/ja-jp/windows/mixed-reality/spatial_mapping)など、Windows Holographic Platform と HoloLensの核となる機能を示します。このチュートリアルの所要時間は約 1 時間です。
 
 ## 前提条件
 
--   [*適切なツールをインストール*](https://developer.microsoft.com/ja-jp/windows/holographic/install_the_tools)して構成した Windows 10 PC。
+-   [*適切なツールをインストール*](https://developer.microsoft.com/ja-jp/windows/mixed-reality/install_the_tools)して構成した Windows 10 PC。
 
 ## プロジェクト ファイル
 
@@ -87,11 +87,11 @@
 -   Visual Studio 上部のツール バーを使って、ターゲットを \[Debug\] から \[Release\]、\[ARM\] から \[X86\] に変更します。
     -   \[デバイス\] ボタンの横にある矢印をクリックして、\[HoloLens Emulator\] を選びます。
     -   \[デバッグ\]、\[デバッグなしで開始\] の順に選ぶか、**Ctrl** キーを押しながら **F5** キーを押します。
-    -   しばらくすると、エミュレーターで Origami プロジェクトが開始されます。[*エミュレーター*](https://developer.microsoft.com/ja-jp/windows/holographic/using_the_hololens_emulator)の初回起動時は、開始まで 15 分程度かかることがあります。一度エミュレーターを起動したら、閉じないようにします。
+    -   しばらくすると、エミュレーターで Origami プロジェクトが開始されます。[*エミュレーター*](https://developer.microsoft.com/ja-jp/windows/mixed-reality/using_the_hololens_emulator)の初回起動時は、開始まで 15 分程度かかることがあります。一度エミュレーターを起動したら、閉じないようにします。
 
 ## 第 2 章 – 視線
 
-この章では、ホログラムを操作する 3 つの方法のうちの最初の １ つ、[*視線*](https://developer.microsoft.com/ja-jp/windows/holographic/gaze)について説明します。
+この章では、ホログラムを操作する 3 つの方法のうちの最初の １ つ、[*視線*](https://developer.microsoft.com/ja-jp/windows/mixed-reality/gaze)について説明します。
 
 ### 目標
 
@@ -112,7 +112,7 @@
 -   WorldCursor スクリプトをダブルクリックして Visual Studio で開きます。
 -   次のコードをコピーして WorldCursor.cs に貼り付け、\[すべて保存\] をクリックします。
 
-WorldCursor.cs 
+WorldCursor.cs
 ```cs
 using UnityEngine;
 
@@ -166,7 +166,7 @@ public class WorldCursor : MonoBehaviour
 
 ## 第 3 章 – ジェスチャー
 
-この章では、[*ジェスチャー*](https://developer.microsoft.com/ja-jp/windows/holographic/gestures)のサポートを追加します。ここでは紙で作った球体をユーザーが選ぶと、その球体が落ちるようにします。そのため、Unity の物理エンジンを使って重力を有効にします。
+この章では、[*ジェスチャー*](https://developer.microsoft.com/ja-jp/windows/mixed-reality/gestures)のサポートを追加します。ここでは紙で作った球体をユーザーが選ぶと、その球体が落ちるようにします。そのため、Unity の物理エンジンを使って重力を有効にします。
 
 ### 目標
 
@@ -278,7 +278,7 @@ public class SphereCommands : MonoBehaviour
 
 ## 第 4 章 – 音声
 
-この章では、2 つの[*音声コマンド*](https://developer.microsoft.com/ja-jp/windows/holographic/voice_input)のサポートを追加します。「Reset world」 で落ちた球体を元の場所に戻し、「Drop sphere」 で球体を落下させます。
+この章では、2 つの[*音声コマンド*](https://developer.microsoft.com/ja-jp/windows/mixed-reality/voice_input)のサポートを追加します。「Reset world」 で落ちた球体を元の場所に戻し、「Drop sphere」 で球体を落下させます。
 
 ### 目標
 
@@ -292,7 +292,7 @@ public class SphereCommands : MonoBehaviour
 -   Visual Studio で SpeechManager スクリプトを開きます。
 -   次のコードをコピーして SpeechManager.cs に貼り付け、\[すべて保存\] をクリックします。
 
-SpeechManager.cs 
+SpeechManager.cs
 ```cs
 using System.Collections.Generic;
 using System.Linq;
@@ -345,7 +345,7 @@ public class SpeechManager : MonoBehaviour
 -   Visual Studio で SphereCommands スクリプトを開きます。
 -   このスクリプトを次のように更新します。
 
-SphereCommands.cs 
+SphereCommands.cs
 ```cs
 using UnityEngine;
 
@@ -400,7 +400,7 @@ public class SphereCommands : MonoBehaviour
 
 ## 第 5 章 – 空間音響
 
-この章では、アプリに音楽を追加してから、特定の動作で音響効果が引き起こされるようにします。ここでは[*空間音響*](https://developer.microsoft.com/ja-jp/windows/holographic/spatial_sound)を使用して、3D 空間の特定の場所に効果音を設定します。
+この章では、アプリに音楽を追加してから、特定の動作で音響効果が引き起こされるようにします。ここでは[*空間音響*](https://developer.microsoft.com/ja-jp/windows/mixed-reality/spatial_sound)を使用して、3D 空間の特定の場所に効果音を設定します。
 
 ### 目標
 
@@ -423,7 +423,7 @@ public class SphereCommands : MonoBehaviour
 -   SphereSounds をドラッグして、\[Hierarchy\] パネルの Sphere1 オブジェクトとSphere2 オブジェクトにドロップします。
 -   Visual Studio で SphereSounds を開き、次のようにコードを更新して \[すべて保存\] をクリックします。
 
-SphereSounds.cs 
+SphereSounds.cs
 ```cs
 using UnityEngine;
 
@@ -501,7 +501,7 @@ public class SphereSounds : MonoBehaviour
 
 ## 第 6 章 – 空間マッピング
 
-ここで、ゲーム ボードを現実世界の現実の物体に持ち込むために、[*空間マッピング*](https://developer.microsoft.com/ja-jp/windows/holographic/spatial_mapping)を使用します。
+ここで、ゲーム ボードを現実世界の現実の物体に持ち込むために、[*空間マッピング*](https://developer.microsoft.com/ja-jp/windows/mixed-reality/spatial_mapping)を使用します。
 
 ### 目標
 
@@ -527,7 +527,7 @@ public class SphereSounds : MonoBehaviour
 -   TapToPlaceParent スクリプトを Stage オブジェクトにドラッグします。
 -   Visual Studio で TapToPlaceParent スクリプトを開き、次のようにコードを変更します。
 
-TapToPlaceParent.cs 
+TapToPlaceParent.cs
 ```cs
 using UnityEngine;
 
@@ -602,10 +602,8 @@ public class TapToPlaceParent : MonoBehaviour
 ## 関連項目
 
 -   [*ホログラム 101*](holograms_101.md)
--   [*視線*](https://developer.microsoft.com/ja-jp/windows/holographic/gaze)
--   [*ジェスチャー*](https://developer.microsoft.com/ja-jp/windows/holographic/gestures)
--   [*音声入力*](https://developer.microsoft.com/ja-jp/windows/holographic/voice_input)
--   [*空間音響*](https://developer.microsoft.com/ja-jp/windows/holographic/spatial_sound)
--   [*空間マッピング*](https://developer.microsoft.com/ja-jp/windows/holographic/spatial_mapping)
-
-
+-   [*視線*](https://developer.microsoft.com/ja-jp/windows/mixed-reality/gaze)
+-   [*ジェスチャー*](https://developer.microsoft.com/ja-jp/windows/mixed-reality/gestures)
+-   [*音声入力*](https://developer.microsoft.com/ja-jp/windows/mixed-reality/voice_input)
+-   [*空間音響*](https://developer.microsoft.com/ja-jp/windows/mixed-reality/spatial_sound)
+-   [*空間マッピング*](https://developer.microsoft.com/ja-jp/windows/mixed-reality/spatial_mapping)

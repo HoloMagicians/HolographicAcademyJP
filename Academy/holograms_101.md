@@ -131,14 +131,14 @@ public class WorldCursor : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        // Grab the mesh renderer that&#39;s on the same object as this script.
-        meshRenderer = this.gameObject.GetComponentInChildren&lt;MeshRenderer&gt;();
+        // Grab the mesh renderer that's on the same object as this script.
+        meshRenderer = this.gameObject.GetComponentInChildren<MeshRenderer>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        // Do a raycast into the world based on the user&#39;s
+        // Do a raycast into the world based on the user's
         // head position and orientation.
         var headPosition = Camera.main.transform.position;
         var gazeDirection = Camera.main.transform.forward;
@@ -209,12 +209,12 @@ public class GazeGestureManager : MonoBehaviour
 
         // Set up a GestureRecognizer to detect Select gestures.
         recognizer = new GestureRecognizer();
-        recognizer.TappedEvent += (source, tapCount, ray) =&gt;
+        recognizer.TappedEvent += (source, tapCount, ray) =>
         {
             // Send an OnSelect message to the focused object and its ancestors.
             if (FocusedObject != null)
             {
-                FocusedObject.SendMessageUpwards(&quot;OnSelect&quot;);
+                FocusedObject.SendMessageUpwards("OnSelect");
             }
         };
         recognizer.StartCapturingGestures();
@@ -226,7 +226,7 @@ public class GazeGestureManager : MonoBehaviour
         // Figure out which hologram is focused this frame.
         GameObject oldFocusObject = FocusedObject;
 
-        // Do a raycast into the world based on the user&#39;s
+        // Do a raycast into the world based on the user's
         // head position and orientation.
         var headPosition = Camera.main.transform.position;
         var gazeDirection = Camera.main.transform.forward;
@@ -270,9 +270,9 @@ public class SphereCommands : MonoBehaviour
     void OnSelect()
     {
         // If the sphere has no Rigidbody component, add one to enable physics.
-        if (!this.GetComponent&lt;Rigidbody&gt;())
+        if (!this.GetComponent<Rigidbody>())
         {
-            var rigidbody = this.gameObject.AddComponent&lt;Rigidbody&gt;();
+            var rigidbody = this.gameObject.AddComponent<Rigidbody>();
             rigidbody.collisionDetectionMode = CollisionDetectionMode.Continuous;
         }
     }
@@ -309,24 +309,24 @@ using UnityEngine.Windows.Speech;
 public class SpeechManager : MonoBehaviour
 {
     KeywordRecognizer keywordRecognizer = null;
-    Dictionary&lt;string, System.Action&gt; keywords = new Dictionary&lt;string, System.Action&gt;();
+    Dictionary<string, System.Action> keywords = new Dictionary<string, System.Action>();
 
     // Use this for initialization
     void Start()
     {
-        keywords.Add(&quot;Reset world&quot;, () =&gt;
+        keywords.Add("Reset world", () =>
         {
             // Call the OnReset method on every descendant object.
-            this.BroadcastMessage(&quot;OnReset&quot;);
+            this.BroadcastMessage("OnReset");
         });
 
-        keywords.Add(&quot;Drop Sphere&quot;, () =&gt;
+        keywords.Add("Drop Sphere", () =>
         {
             var focusObject = GazeGestureManager.Instance.FocusedObject;
             if (focusObject != null)
             {
                 // Call the OnDrop method on just the focused object.
-                focusObject.SendMessage(&quot;OnDrop&quot;);
+                focusObject.SendMessage("OnDrop");
             }
         });
 
@@ -371,18 +371,18 @@ public class SphereCommands : MonoBehaviour
     void OnSelect()
     {
         // If the sphere has no Rigidbody component, add one to enable physics.
-        if (!this.GetComponent&lt;Rigidbody&gt;())
+        if (!this.GetComponent<Rigidbody>())
         {
-            var rigidbody = this.gameObject.AddComponent&lt;Rigidbody&gt;();
+            var rigidbody = this.gameObject.AddComponent<Rigidbody>();
             rigidbody.collisionDetectionMode = CollisionDetectionMode.Continuous;
         }
     }
 
-    // Called by SpeechManager when the user says the &quot;Reset world&quot; command
+    // Called by SpeechManager when the user says the "Reset world" command
     void OnReset()
     {
         // If the sphere has a Rigidbody component, remove it to disable physics.
-        var rigidbody = this.GetComponent&lt;Rigidbody&gt;();
+        var rigidbody = this.GetComponent<Rigidbody>();
         if (rigidbody != null)
         {
             DestroyImmediate(rigidbody);
@@ -392,7 +392,7 @@ public class SphereCommands : MonoBehaviour
         this.transform.localPosition = originalPosition;
     }
 
-    // Called by SpeechManager when the user says the &quot;Drop sphere&quot; command
+    // Called by SpeechManager when the user says the "Drop sphere" command
     void OnDrop()
     {
         // Just do the same logic as a Select gesture.
@@ -445,7 +445,7 @@ public class SphereSounds : MonoBehaviour
     void Start()
     {
         // Add an AudioSource component and set up some defaults
-        audioSource = gameObject.AddComponent&lt;AudioSource&gt;();
+        audioSource = gameObject.AddComponent<AudioSource>();
         audioSource.playOnAwake = false;
         audioSource.spatialize = true;
         audioSource.spatialBlend = 1.0f;
@@ -454,15 +454,15 @@ public class SphereSounds : MonoBehaviour
         audioSource.maxDistance = 20f;
 
         // Load the Sphere sounds from the Resources folder
-        impactClip = Resources.Load&lt;AudioClip&gt;(&quot;Impact&quot;);
-        rollingClip = Resources.Load&lt;AudioClip&gt;(&quot;Rolling&quot;);
+        impactClip = Resources.Load<AudioClip>("Impact");
+        rollingClip = Resources.Load<AudioClip>("Rolling");
     }
 
     // Occurs when this object starts colliding with another object
     void OnCollisionEnter(Collision collision)
     {
         // Play an impact sound if the sphere impacts strongly enough.
-        if (collision.relativeVelocity.magnitude &gt;= 0.1f)
+        if (collision.relativeVelocity.magnitude >= 0.1f)
         {
             audioSource.clip = impactClip;
             audioSource.Play();
@@ -472,17 +472,17 @@ public class SphereSounds : MonoBehaviour
     // Occurs each frame that this object continues to collide with another object
     void OnCollisionStay(Collision collision)
     {
-        Rigidbody rigid = this.gameObject.GetComponent&lt;Rigidbody&gt;();
+        Rigidbody rigid = this.gameObject.GetComponent<Rigidbody>();
 
         // Play a rolling sound if the sphere is rolling fast enough.
-        if (!rolling &amp;&amp; rigid.velocity.magnitude &gt;= 0.01f)
+        if (!rolling && rigid.velocity.magnitude >= 0.01f)
         {
             rolling = true;
             audioSource.clip = rollingClip;
             audioSource.Play();
         }
         // Stop the rolling sound if rolling slows down.
-        else if (rolling &amp;&amp; rigid.velocity.magnitude &lt; 0.01f)
+        else if (rolling && rigid.velocity.magnitude < 0.01f)
         {
             rolling = false;
             audioSource.Stop();
@@ -565,7 +565,7 @@ public class TapToPlaceParent : MonoBehaviour
     void Update()
     {
         // If the user is in placing mode,
-        // update the placement to match the user&#39;s gaze.
+        // update the placement to match the user's gaze.
 
         if (placing)
         {
@@ -577,11 +577,11 @@ public class TapToPlaceParent : MonoBehaviour
             if (Physics.Raycast(headPosition, gazeDirection, out hitInfo,
                 30.0f, SpatialMapping.PhysicsRaycastMask))
             {
-                // Move this object&#39;s parent object to
+                // Move this object's parent object to
                 // where the raycast hit the Spatial Mapping mesh.
                 this.transform.parent.position = hitInfo.point;
 
-                // Rotate this object&#39;s parent object to face the user.
+                // Rotate this object's parent object to face the user.
                 Quaternion toQuat = Camera.main.transform.localRotation;
                 toQuat.x = 0;
                 toQuat.z = 0;

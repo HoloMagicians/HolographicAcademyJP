@@ -101,7 +101,7 @@ SpatialCoordinateSystem
 軸の正方向に曲げます。このとき、親指は右手を使うか左手を使うかによって手前方向または画面奥の方向を指します。この親指が指す方向が
 z 軸の正方向です。次の図はこの 2 つの座標系を示します。
 
-![](media/image1.png)
+![](media/Coordinate systems in DirectX/image1.png)
 
 デバイスの位置を基に SpatialCoordinateSystem
 にブートストラップするには、以下で説明するように

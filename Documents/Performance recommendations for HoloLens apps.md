@@ -272,14 +272,14 @@ HoloLens
 3 つの変数に応じて異なります。これらの 3 つの変数と HoloLens
 の耐熱機能の関係を以下に示します。
 
-![](media/image1.png)
+![](media/Performance recommendations for HoloLens apps/image1.png)
 
 システム パフォーマンス ページには、SoC
 電力消費量、システム電力消費量、デバイスのフレーム レート、CPU と GPU
 の使用量、ディスク I/O、ネットワーク帯域幅、メモリ使用量のパフォーマンス
 データがリアルタイムに表示されます。
 
-![](media/image2.png)
+![](media/Performance recommendations for HoloLens apps/image2.png)
 
 **System power (システム電力消費量)** システム電力消費量には、HoloLens
 の電力総使用量が示されます。これにはアクティブなセンサー、ディスプレイ、スピーカー、GPU、CPU、メモリなど、すべてのコンポーネントの電力消費量が含まれます。HoloLens
@@ -294,7 +294,7 @@ CPU と GPU
 Soc 電力消費量とシステム電力消費量のグラフには、現在の電力消費量と 1
 分間の平均電力消費量が示されます。アプリ起動中など、短時間の電力負荷の上昇は容認できます。
 
-![](media/image3.png)
+![](media/Performance recommendations for HoloLens apps/image3.png)
 
 グリーン ゾーン:
 アプリの電力消費量は、デバイスの許容範囲内に適切に収まっています。\

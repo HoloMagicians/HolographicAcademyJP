@@ -25,8 +25,7 @@ continuum)」という考え方が取り入れられ、この考え方がディ�
 
 **環境入力と認識**
 
-![Venn diagram showing interactions between computers, humans and
-environments](media/Mixed reality/image1.png)
+<img src="media/Mixed reality/image1.png" width="310" height="310">
 
 過去数十年、人間による入力とコンピューターによる入力の関係は十分な調査が行われてきました。これは「人間とコンピュータとの相互作用
 (HCI: Human Computer
@@ -66,17 +65,13 @@ API*](https://docs.microsoft.com/ja-jp/uwp/api/Windows.Perception)
     (壁や家具など)
     をデジタルに出現させ、物理的な対象物をユーザーが避けられるようにします。
 
-![The mixed reality
-spectrum](media/Mixed reality/image2.png){width="5.620138888888889in"
-height="1.7291666666666667in"}
+<img src="media/Mixed reality/image2.png" width="562" height="172">
 
 今日市場で入手できるほとんどの拡張現実や仮想現実は、このスペクトルのごくわずかな部分しか表していません。とはいえ、どちらもさらに大きな複合現実スペクトルのサブセットにはなっています。Windows
 10
 はこのスペクトル全体を念頭においてビルドされているため、現実世界の人物、場所、物体のデジタル表現を融合することができます。
 
-![Device types in the mixed reality
-spectrum](media/Mixed reality/image3.png){width="5.620138888888889in"
-height="1.1458333333333333in"}
+<img src="media/Mixed reality/image3.png" width="562" height="114">
 
 Windows Mixed Reality のエクスペリエンスを提供するデバイスは主に以下の 2
 種類があります。
@@ -111,9 +106,7 @@ Windows Mixed Reality のエクスペリエンスを提供するデバイスは�
 により、デバイスのメーカーにも開発者にも共通の複合現実プラットフォームが提供されます。現状のデバイスがサポートできるのは、複合現実スペクトルの特定範囲です。やがて、この範囲を拡大する新たなデバイスが登場します。将来は、ホログラフィック
 デバイスは没入型に近づき、没入型デバイスはホログラフィックに近づいていくと考えられます。
 
-![Where devices lay on the mixed reality
-spectrum](media/image6.png){width="5.620138888888889in"
-height="1.1666666666666667in"}
+<img src="media/Mixed reality/image6.png" width="562" height="116">
 
 多くの場合、アプリやゲームの開発者は、どの種類のエクスペリエンスを作成するかを考えるのがお勧めです。そのエクスペリエンスのターゲットは、一般に、スペクトルの特定のポイントまたは特定部分に定めることになります。次に、開発者は、ターゲットにするデバイスの機能を考えます。たとえば、現実世界を中心とするエクスペリエンスには
 HoloLens が最適といえるでしょう。
@@ -127,9 +120,7 @@ HoloLens が最適といえるでしょう。
 -   **スペクトルの右方向
     (仮想世界に近い方向)。**ユーザーのエクスペリエンスは完全にデジタル環境の中で起こります。自身を取り巻く現実の環境で起きていることには気付きません。
 
-![Where experiences lay on the mixed reality
-spectrum](media/Mixed reality/image7.png){width="5.620138888888889in"
-height="2.1354166666666665in"}
+<img src="media/Mixed reality/image7.png" width="562" height="213">
 
 上の図は、複合現実スペクトルの位置に応じて利用可能なさまざまなエクスペリエンスを示しています。
 

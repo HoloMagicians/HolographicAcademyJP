@@ -26,8 +26,7 @@ continuum)」という考え方が取り入れられ、この考え方がディ�
 **環境入力と認識**
 
 ![Venn diagram showing interactions between computers, humans and
-environments](media/Mixed reality/image1.png){width="3.109722222222222in"
-height="3.109722222222222in"}
+environments](media/Mixed reality/image1.png)
 
 過去数十年、人間による入力とコンピューターによる入力の関係は十分な調査が行われてきました。これは「人間とコンピュータとの相互作用
 (HCI: Human Computer

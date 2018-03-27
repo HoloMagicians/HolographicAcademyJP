@@ -316,7 +316,7 @@ namespace Academy.HoloToolkit.Unity
             // 2.b: Instantiate the NavigationRecognizer.
             NavigationRecognizer = new GestureRecognizer();
 
-            // 2.b: Add Tap and NavigationX GestureSettings to the NavigationRecognizer&#39;s RecognizableGestures.
+            // 2.b: Add Tap and NavigationX GestureSettings to the NavigationRecognizer's RecognizableGestures.
             NavigationRecognizer.SetRecognizableGestures(
                 GestureSettings.Tap |
                 GestureSettings.NavigationX);

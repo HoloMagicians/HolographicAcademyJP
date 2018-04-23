@@ -438,7 +438,7 @@ namespace Academy.HoloToolkit.Unity
 
                 ManipulationPosition = position;
 
-                HandsManager.Instance.FocusedGameObject.SendMessageUpwards(&quot;PerformManipulationStart&quot;, position);
+                HandsManager.Instance.FocusedGameObject.SendMessageUpwards("PerformManipulationStart", position);
             }
         }
 
@@ -450,7 +450,7 @@ namespace Academy.HoloToolkit.Unity
 
                 ManipulationPosition = position;
 
-                HandsManager.Instance.FocusedGameObject.SendMessageUpwards(&quot;PerformManipulationUpdate&quot;, position);
+                HandsManager.Instance.FocusedGameObject.SendMessageUpwards("PerformManipulationUpdate", position);
             }
         }
 
@@ -470,7 +470,7 @@ namespace Academy.HoloToolkit.Unity
 
             if (focusedObject != null)
             {
-                focusedObject.SendMessageUpwards(&quot;OnSelect&quot;);
+                focusedObject.SendMessageUpwards("OnSelect");
             }
         }
     }

@@ -220,7 +220,7 @@ namespace Academy.HoloToolkit.Unity
             if (InteractibleManager.Instance.FocusedGameObject != null)
             {
                 // Play a select sound if we have an audio source and are not targeting an asset with a select sound.
-                if (audioSource != null &amp;&amp; !audioSource.isPlaying &amp;&amp;
+                if (audioSource != null && !audioSource.isPlaying &&
                     (InteractibleManager.Instance.FocusedGameObject.GetComponent<Interactible>() != null &amp;&amp;
                     InteractibleManager.Instance.FocusedGameObject.GetComponent<Interactible>().TargetFeedbackSound == null))
                 {

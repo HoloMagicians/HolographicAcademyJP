@@ -335,7 +335,7 @@ namespace Academy.HoloToolkit.Unity
             // Instantiate the ManipulationRecognizer.
             ManipulationRecognizer = new GestureRecognizer();
 
-            // Add the ManipulationTranslate GestureSetting to the ManipulationRecognizer&#39;s RecognizableGestures.
+            // Add the ManipulationTranslate GestureSetting to the ManipulationRecognizer's RecognizableGestures.
             ManipulationRecognizer.SetRecognizableGestures(
                 GestureSettings.ManipulationTranslate);
 

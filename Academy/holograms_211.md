@@ -497,7 +497,7 @@ using UnityEngine;
 /// </summary>
 public class GestureAction : MonoBehaviour
 {
-    [Tooltip(&quot;Rotation max speed controls amount of rotation.&quot;)]
+    [Tooltip("Rotation max speed controls amount of rotation.")]
     public float RotationSensitivity = 10.0f;
 
     private Vector3 manipulationPreviousPosition;
@@ -511,9 +511,9 @@ public class GestureAction : MonoBehaviour
 
     private void PerformRotation()
     {
-        if (GestureManager.Instance.IsNavigating &amp;&amp;
+        if (GestureManager.Instance.IsNavigating &&
             (!ExpandModel.Instance.IsModelExpanded ||
-            (ExpandModel.Instance.IsModelExpanded &amp;&amp; HandsManager.Instance.FocusedGameObject == gameObject)))
+            (ExpandModel.Instance.IsModelExpanded && HandsManager.Instance.FocusedGameObject == gameObject)))
         {
             /* TODO: DEVELOPER CODING EXERCISE 2.c */
 

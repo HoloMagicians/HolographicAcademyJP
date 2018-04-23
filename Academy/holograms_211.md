@@ -377,7 +377,7 @@ namespace Academy.HoloToolkit.Unity
         /// <summary>
         /// Transition to a new GestureRecognizer.
         /// </summary>
-        /// <param name=&quot;newRecognizer&quot;>The GestureRecognizer to transition to.</param>
+        /// <param name="newRecognizer">The GestureRecognizer to transition to.</param>
         public void Transition(GestureRecognizer newRecognizer)
         {
             if (newRecognizer == null)
